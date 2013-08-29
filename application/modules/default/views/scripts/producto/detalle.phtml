@@ -1,0 +1,33 @@
+<script>
+$(document).ready(function(){
+    $('#formCarrito input:text').numeric({decimal: false, negative : false});
+})
+</script>
+<div id="primary_block">
+<h2><?php echo $this->producto["nom_prod"]." (".$this->producto["codigo_web"].")";?></h2>
+<div id="pb-right-column">
+<div id="image-block">
+    <a href="<?php echo SITE_URL."/images/large/".$this->producto["imagen"]; ?>" class="thickbox" title="Modern Rose Plant">
+<img alt="Modern Rose Plant" title="Modern Rose Plant" src="<?php echo SITE_URL."/images/small/".$this->producto["imagen"]; ?>" >
+</a>
+</div>	
+</div>
+<div id="pb-left-column">
+	<div id="short_description_block">
+        <p class="price">
+        <font color="black">Precio: <b> s/. <?php echo $this->producto["precio"]; ?></b></font>
+        </p>
+        <form method="post" id="formCarrito">
+        <p id="quatity_wanted_p">
+		<label>Cantidad:</label>
+		<input type="text" name="cantidad" id="quantity_wanted" class="text"  size="2" maxlength="2" />
+                <input type="hidden" name="nom_prod" value='<?=$this->producto["nom_prod"]?>'>
+                <input type="hidden" name="precio" value='<?=$this->producto["precio"]?>'>
+                <input type="hidden" name="imagen" value='<?=$this->producto["imagen"]?>'>
+                <input type="submit" value="Agregar" />
+	</p>
+        </form>
+	</div>
+</div>
+</div>
+

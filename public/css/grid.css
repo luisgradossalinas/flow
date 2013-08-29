@@ -1,0 +1,8 @@
+.ui-jqgrid .ui-jqgrid-bdiv {
+  position: relative; 
+  margin: 0em; 
+  padding:0; 
+  overflow-x:hidden; 
+  overflow-y:auto; 
+  text-align:left;
+}  

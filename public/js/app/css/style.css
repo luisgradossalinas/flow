@@ -1,0 +1,2320 @@
+@charset "utf-8";
+/* CSS Document */
+*, body
+{
+    margin:0;
+   /* padding:0;*/
+}
+body
+{
+    font:normal 12px Arial, Helvetica, sans-serif;
+    color:#494949;
+}
+h2
+{
+    color:#006699;
+    font: bold 13px Arial, "Trebuchet MS", Georgia;
+    padding:5px 10px;
+}
+h3
+{
+    color:#666;
+    padding:5px 0 10px 0;
+    font:bold 14px Arial, Helvetica, sans-serif;
+}
+ul, ol
+{
+    list-style-position:outside;
+}
+
+/* Estilos de Formularios */
+form
+{
+    padding:0px;
+}
+form ul li {
+    margin:0 0 10px 175px;
+    color:#CC0000;
+	}
+fieldset
+{
+    border:1px solid #CDECF5;
+    color:#999;
+    margin-bottom:4px;
+    padding:1px 0 1px 0px;
+}
+legend
+{
+    margin:0;
+    padding:1px 1px 1px 1px;
+    color:#27A9D7;
+    font:bold 15px Arial, Helvetica, sans-serif;
+    letter-spacing:0.05em;
+}
+
+label
+{
+    height:20px;
+    text-align:right;
+    margin-right:5px;
+    color:#048FC2;
+}
+
+
+ div.fields label
+{
+    display:block;
+    float:left;
+    width:190px;
+    text-align:right;
+    margin-right:5px;
+    line-height:18px;
+    font-weight: bold;
+}
+
+div.fields
+{
+    display:block;
+    width:99%;
+    overflow: hidden;
+
+}
+input, select, textarea
+{
+    margin-bottom:1px;
+    border:1px solid #B9D7E6;
+    border-top-color:#D5E8F0;
+    border-left-color:#D5E8F0;
+    padding:1px;
+    color:#666;
+    font:normal 12px Arial, Helvetica, sans-serif;
+    background:#FFF;
+    margin-right: 0px;
+}
+input[type=button]
+{
+    font-size: 8.5pt;
+}
+
+input:hover,
+select:hover,
+textarea:hover
+{
+    background:#EBFAFE;
+    border:1px solid #B9D7E6;
+}
+input:focus,
+select:focus,
+textarea:hover
+{
+    border:1px solid #B9D7E6;
+}
+select
+{
+    padding:0px 0px 0px 0;
+    border-width:1px;
+    border-style:solid;
+    border-color: #D5E8F0 #B9D7E6 #B9D7E6 #D5E8F0;
+}
+button
+{
+    font:normal 12px Arial, Helvetica, sans-serif;
+    margin:0px;
+}
+.hint {
+    color:#FEAE36;
+}
+/* Maquetacion */
+#Wrapper
+{
+    display:block;
+    width:100%;
+    /*min-width:995px;
+    -min-width:1000px;
+    /*.min-width:1000px;*/
+}
+.popup
+{
+    min-width:100%;
+    -min-width:100%;
+    }
+#Head
+{
+    display:block;
+    width:100%;
+    height:48px;
+    background:#048FC2;
+}
+    #Head #Logo
+    {
+        border:0 solid #CCCCCC;
+        display:block;
+        float:left;
+        height:32px;
+        margin-left:0px !important;
+        margin-top:0px;
+        width:auto;
+    }
+    #Logo h1 a
+    {
+        background-color:transparent;
+        display:block;
+        float:left;
+        height:30px;
+        left:0;
+        margin:0;
+        padding:10px 0 0 20px;
+        top:0;
+        width:auto;
+        font:bold 18px Arial, Helvetica, sans-serif;
+        color:#FFF;
+        text-decoration:none;
+    }
+    #Logo h1 a:hover
+    {
+        text-decoration:underline;
+    }
+    #Head #Access
+    {
+        display:block;
+        float:right;
+        height:45px;
+        text-align:right;
+        width:auto;
+    }
+    #Access ul
+    {
+        list-style-type:none;
+        margin:10px 0 0;
+    }
+    #Access li
+    {
+        display:inline;
+        padding:0 10px;
+    }
+    #Access a
+    {
+        color:#A6DBEC;
+        height:24px;
+        line-height:20px;
+        text-decoration:none;
+    }
+    #Access a:hover
+    {
+        text-decoration:underline;
+    }
+    #Head #LogoYarkan
+    {
+        float:right;
+        display:block;
+        /*background:url(graphics/img_logoYkSmall.jpg) left top no-repeat;*/
+        height:33px;
+        width:100px;
+        margin:5px 10px 6px 10px;
+    }
+   
+#Container
+{
+    height:100% !important;
+    display:block;
+    clear:both;
+}
+    #Login
+    {
+        padding-top:120px;
+        margin-left:auto;
+        margin-right:auto;
+        width:770px;
+        height:200px;
+        color:#1992D3;
+    }
+    .nameCompany
+    {
+        color:#FFFFFF;
+        font:normal 15px "Trebuchet Ms", Arial, Helvetica, sans-serif;
+        padding-bottom:5px;
+        font-weight:bold;
+    }
+    #Login #LoginLeft
+    {
+        float:left;
+        width:327px;
+        height:300px;
+        margin-right:47px;
+    }
+    #Login #LoginRight
+    {
+        float:left;
+        padding-top:25px;
+        width:330px;
+    }
+        #Login fieldset
+        {
+            color:#FFF;
+            margin:0px 15px 0px 15px;
+            border:0px;
+            border-top:1px solid #3397BD;
+            padding:10px 0 0 0;
+        }
+        #Login label
+        {
+            width:90px;
+            color:#FFFFFF;
+        }
+        #Login a
+        {
+            color:#025473;
+            text-decoration:underline;
+        }
+        #Login a:hover
+        {
+            text-decoration:none;
+        }
+        #Login input.checkBox:hover
+        {
+            border:0px solid #B9D7E6;
+        }
+        #LoginTop
+        {
+            display:block;
+            width:auto;
+            height:17px;
+            background:#1C8EB8 url(graphics/bg_loginTop.gif) left top no-repeat;
+        }
+        #LoginContent
+        {
+            background:#1C97C5 url(graphics/bg_loginMiddle.gif) left top repeat-x;
+            padding:0 10px 0 10px;
+        }
+        #LoginContent span
+        {
+            display:block;
+            text-align:center;
+            margin-top:10px;
+        }
+        #LoginContent span input
+        {
+            text-align:center;
+        }
+        #LoginContent ul
+        {
+            margin-bottom:10px;
+        }
+        #LoginContent ul li
+        {
+            margin:0; padding:0;
+            margin-left:100px;
+            color:#FFCC00;
+        }
+        #LoginBottom
+        {
+            display:block;
+            height:17px;
+            background:#1C8EB8 url(graphics/bg_loginBottom.gif) left top no-repeat;
+            margin:0;
+            padding:0;
+        }
+
+
+    #ContentWrapper
+    {
+        padding:0px 0 0 0px;
+        overflow:hidden;
+        width:100%;
+    }
+    #Sidebar
+    {
+        width:193px;
+        padding-left:7px;
+        float:left;
+        background:#F9F9F9;
+    }
+        #Sidebar h1
+        {
+            margin:0px;
+            font:bold 13px Arial, Helvetica, sans-serif;
+            letter-spacing:1px;
+            display:block;
+            padding:7px 15px 7px 8px;
+            color:#172C37;
+            margin-right:12px;
+            border-bottom:1px solid #F0F0F0;
+        }
+        #Sidebar h1 a
+        {
+            color: #172C37;
+        }
+        #Sidebar ul
+        {
+            list-style:none;
+            margin:0;
+        }
+        #Sidebar li
+        {
+            margin:0;
+            padding:0;
+            list-style:none;
+            background: url(graphics/ico_itemSidebar.jpg) 0px 11px no-repeat;
+            border:none;
+        }
+        #Sidebar a
+        {
+            text-decoration:none;
+        }
+        #Sidebar a:hover
+        {
+            background: url(graphics/ico_itemSidebar.jpg) 0px 11px no-repeat;
+        }
+
+    #Slider
+    {
+        float:left;
+        width:5px;
+        border-left:0px solid #FFF;
+        padding:5px 0 4px 0;
+    }
+        #BtnSlider
+        {
+            margin:0;
+            padding:0;
+            height:35px;
+            width:5px;
+            display:block;
+            cursor:pointer;
+        }
+    #Content
+    {
+        margin:0px;
+        display:block;
+        border-left:0px solid #E0E0E0;
+    }
+        #Content #ContentBody
+        {
+            padding:15px;
+        }
+        #Content #ContentBody h1
+        {
+            color:#172C37;
+            margin-bottom:15px;
+        }
+        #Content #ContentBody a
+        {
+            color:#008AB3;
+            text-decoration:none;
+        }
+        #Content #ContentBody a:hover
+        {
+            color: #D26001;
+        }
+        #Content #ContentBody .diffContact a
+        {
+            color:#C42424;
+        }
+        #Content #ContentBody .addContact a
+        {
+            color:#88AA22;
+        }
+
+        /**** Estilos para el listado de hoteles****/
+        #Left {
+            float:left;
+            width:210px;
+            margin-right:10px;
+            margin-left:0px;
+        }
+            #Left a {
+                /*color:#DF4D1B;*/
+            }
+
+        #Right {
+            /*float:left;*/
+            width:auto;
+            background:#FFF;
+            color:#414141;
+            margin-left: 225px;
+        }
+            #Right h1 {
+                font:bold 14px Arial, "Lucida Sans", "Century Gothic", "Trebuchet MS", Georgia;
+            }
+        #DetailsHotel {
+            /*float:left;*/
+            width: auto;
+            margin-left: 225px;
+            padding:10px;
+            border:1px solid #E5E5E5;
+            color:#414141;
+            min-height:383px;
+        }
+            #DetailsHotel h1 {
+                font:bold 14px Arial, "Lucida Sans", "Century Gothic", "Trebuchet MS", Georgia;
+            }
+            #DetailsHotel a {
+                color:#DF4D1B;
+                text-decoration:none;
+            }
+            #DetailsHotel p {
+                padding:10px 0 5px 0;
+            }
+            #DetailsHotel ul {
+                list-style-position:inside;
+                list-style-type:circle;
+                padding:0px 0;
+            }
+        #Search {
+            width:295px;
+            margin-left:5px;
+            color:#666666;
+        }
+        #SearchBottom {
+             padding:0 5px 6px 5px;
+             background: url(graphics/bg_searchBottom.jpg) left bottom no-repeat;
+        }
+        #Search table td, #NewSearch table td {
+            padding:1px 0 2px 0;
+        }
+        #RSearch {
+            padding:4px 0 10px 0;
+            margin:0;
+            }
+            #Maps {
+                border-top:1px solid #DBF1FD;
+                padding:10px;
+            }
+        #RFilters {
+            }
+            #RFilters p {
+                padding:5px 10px;
+            }
+        #LCompare	{
+            padding:10px;
+            }
+            #LCompare .compareSelectedHotel {
+                display:block;
+                padding:5px 0 5px 5px;
+                margin:0 0 1px 0;
+                background-color:#F5F5F5;
+            }
+        /* id que filtros */
+        #Remembers {
+            padding:0px 0 5px 0;
+            display:none;
+            height:100%;
+        }
+
+        #BigMap {
+            padding:10px 0;
+            display:none;
+        }
+        #Enabled {
+            background-color:#FFF;
+            position:absolute;
+            z-index:999999999;
+            width:210px;
+            height:1000px;
+            /*.height:1062px;
+            -height:1062px;*/
+        }
+        /**/
+        #ImagenesHotel {
+            background:#EFEFEF;
+            padding:5px;
+        }
+            #ImagenesHotel img {
+                    border:5px solid #FFFFFF;
+            }
+        /* Estilos para comparador de hoteles */
+        #Compare {
+            display:block;
+            width: auto;
+            min-width:938px;
+        }
+            #Compare p {
+                    margin:5px 0 0 0;
+                    padding-bottom:5px;
+            }
+            #Compare h1 {
+                    clear:both;
+                    font-size:14px;
+            }
+            #Compare a {
+                    text-decoration:none;
+                    color:#DF4D1B;
+            }
+            #Compare img {
+                    margin:0 10px 10px 0px;
+            }
+            #Compare .comparador {
+                    float:left;
+                    width:220px;
+                    background:#FFFFFF url(graphics/bg_compare.jpg) left top repeat-x;
+            }
+            #Compare .money {
+                    font-size:18px;
+            }
+            #Compare h1 span.numMap {
+                    padding:1px 10px 2px 5px;
+                    background:url(graphics/bg_numMap.jpg) left top no-repeat;
+                    color:#FFF;
+                    font-size:12px;
+            }
+            .separatorCompare{
+                    margin-right:19px;
+            }
+            .blockSeparator {
+                     border-bottom:1px solid #EFEFEF;
+             }
+            .paddingCompare {
+                    padding:0px 10px 10px 10px;
+                    border-left:1px solid #E9E9E9;
+                    border-right:1px solid #E9E9E9;
+                    border-bottom:1px solid #E9E9E9;
+            }
+            .padding { padding:10px; }
+            .topCompare {
+                     display:block;
+                     height:10px;
+                     background:url(graphics/bg_hotelCompare.jpg) left top  no-repeat;
+             }
+        #Search
+        {
+            display:block;
+            margin:0;
+            padding:0;
+            height:39px;
+            width:auto;
+            background:#FFFFFF  url(graphics/bg_search.gif) left top repeat-x;
+         }
+        #Content .search
+        {
+            display:block;
+            margin:0;
+            padding:0;
+            height:39px;
+            width:auto;
+            background:#FFF url(graphics/bg_dashBoardBottom.gif) left top repeat-x;
+        }
+        #Content #Pager
+        {
+            display:block;
+            padding:5px;
+            height:30px;
+            color:#0F5A84;
+        }
+
+        #CBLeft
+        {
+            float:left;
+            width:540px;
+        }
+        #CBRight
+        {
+            float:right;
+            width:180px;
+            border:1px solid #DFDFDF;
+            padding:10px;
+            color:#666;
+            margin-left:15px;
+            background:#F9F9F8;
+            min-height:392px;
+        }
+            #CBRight p
+            {
+                    margin:10px 5px 10px 5px;
+            }
+            #CBRight ul
+            {
+                    /*list-style-type:none;*/
+                    padding-left:15px;
+            }
+            #CBRight li
+            {
+                    margin:5px;
+            }
+
+        #CBMiddle
+        {
+            display:block;
+            border:1px solid #BAE69D;
+            margin-bottom:15px;
+            padding:10px;
+            background:#EEFADE;
+        }
+            #CBMiddle ul
+            {
+                padding:0 0 0 10px;
+            }
+            #CBMiddle ul.list1
+            {
+                list-style-type: disc;
+            }
+            #CBMiddle li
+            {
+                margin:0 0 10px 17px;
+            }
+        /* Mensajes de error */
+        #Error {
+            margin-top:10px;
+            clear:both;
+            border:1px solid #FF8D6F;
+            background: #FFD9CF;
+            padding:10px;
+            color:#DA3F18;
+         }
+            #Error .icoError {
+                padding:5px 5px 5px 30px;
+                vertical-align:middle;
+                background: url(../../images/ico_failure.gif) left center no-repeat;
+            }
+        #Confirmation {
+            margin-top:10px;
+            clear:both;
+            border:1px solid #54AE08;
+            background: #C9FF8F;
+            padding:5px;
+            color:#008800;
+        }
+            #Confirmation .icoConfirmation {
+                padding:5px 5px 5px 30px;
+                vertical-align:middle;
+                background: url(../../images/ico_confirmation.gif) left center no-repeat;
+            }
+        #Warning {
+            margin-top:10px;
+            clear:both;
+            border:1px solid #FFAB14;
+            background: #FFE9AF;
+            padding:5px;
+            color:#DF8D00;
+        }
+            #Warning .icoWarning {
+                padding:5px 5px 5px 30px;
+                vertical-align:middle;
+                background:url(../../images/ico_warning.gif) left center no-repeat;
+            }
+		/* Fin de mensajes */
+
+#Foot
+{
+	clear:both;
+	display:block;
+	border-top:1px solid #DBDBDB;
+	background:#EAEAEA;
+	line-height:32px;
+	color:#666;
+	padding:0 10px 0 10px;
+	}
+
+/*-------------------------------------------------------------------------------------------------*/
+/* Clases para el login */
+.bgBodyLogin
+{
+	background:#048FC2 url(graphics/bg_login.gif) left top repeat-x;
+}
+.footLogin
+{
+	text-align:center;
+	padding-top:10px;
+	color:#CDE7F1;
+}
+.msgLoginError
+{
+	color:#FFCC00;
+	text-align:center;
+	padding-bottom:0px;
+}
+
+/* Clase para la mascara principal */
+.bgWrapper
+{
+	background: url(graphics/bg_wrapper.gif) left top repeat-y;
+}
+/* Clases para "esconder" o "mastrar" el sidebar */
+.sliderOff
+{
+	background:url(graphics/btn_sliderExpanded.gif) left top no-repeat;
+}
+.sliderOn
+{
+	background:url(graphics/btn_sliderContracted.gif) left top no-repeat;
+}
+/* Clases para formularios */
+.fieldset
+{
+    display:block;
+	border:1px solid #CDECF5;
+	color:#999;
+	margin-bottom:15px;
+	padding:10px;
+	background:#F4FBFD;
+}
+    .fieldset label
+    {
+        color:#454545;
+    }
+.contacts
+{
+    background:#FFF;
+    padding:10px;
+    border:1px solid #E0E0E0;
+}
+    .contacts legend
+    {
+        color:#999999;
+    }
+.legend
+{
+    display:block;
+    padding:5px 15px 5px 33px;
+    color:#27A9D7;
+    font:bold 15px Arial, Helvetica, sans-serif;
+    background: url(graphics/ico_form.png) 10px 5px no-repeat;
+    border-bottom:0px;
+}
+.legend2
+{
+    display:block;
+    padding:5px 15px 5px 33px;
+    color:#999;
+    font:bold 15px Arial, Helvetica, sans-serif;
+    background: url(graphics/ico_contact.png) 10px 5px no-repeat;
+    border-bottom:0px;
+}
+.checkBox
+{
+    border:0;
+    padding:0;
+    margin:0;
+}
+.helpForm
+{
+    color:#D26001;
+    font-size:10px;
+}
+.groupActions
+{
+    display:block;
+    color:#CCCCCC;
+    overflow:hidden;
+    /*width:99%;*/
+    background:#CDECF5;
+    padding-top:10px;
+}
+div.buttons
+{
+    float:left;
+    height:30px;
+    width:auto;
+    display:block;
+    padding-left:10px;
+}
+/* Bloques de sidebar */
+.blockModule
+{
+    border:0px solid #B6DCEF;
+    margin-bottom:5px;
+}
+.blockModuleContent
+{
+    padding:6px 12px 12px 12px;
+    margin:0 13px 0 3px;
+}
+
+/* Clases para "expandir" o "contraer" los submodulos de sidebar */
+.openBlock
+{
+    display:block;
+    background: url(graphics/ico_blockOpen.gif) right 6px no-repeat;
+}
+    #Sidebar h1 a.openBlock:hover
+    {
+        color:#356782;
+        background: url(graphics/ico_blockOpen.gif) right 6px no-repeat;
+    }
+.closeBlock
+{
+	display:block;
+	background:url(graphics/ico_blockClose.gif) right 6px no-repeat;
+}
+	#Sidebar h1 a.closeBlock:hover
+	{
+		color:#356782;
+		background:url(graphics/ico_blockClose.gif) right 6px no-repeat;
+	}
+
+/* Clases para los items de los submodulos */
+.menuItem
+{
+	display:block;
+	margin:0px 0px 0px 0px;
+	height:22px;
+	line-height:24px;
+	color:#0089B3;
+	padding-left:10px;
+	padding-bottom:5px;
+	border-bottom:1px solid #F0F0F0;
+}
+	a.menuItem:hover
+	{
+		background:#FFF;
+		color:#172C37;
+	}
+.menuItemSelect
+{
+	font-weight:normal;
+}
+.optionsList
+{
+    float:right;
+    padding-top:5px;
+    height:25px;
+    display:block;
+}
+/* tabla General*/
+table.tableGral
+{
+    display:table;
+    padding:0px;
+    margin:0 0 10px 0;
+    border:none;
+    width:100%!important;
+    width:99%;
+}
+    table.tableGral th
+    {
+        color:#333;
+        border-bottom:1px solid #CEDDFF;
+        background:#F2F6FF;
+        padding:7px 5px 7px 5px;
+        text-align:left;
+        font-weight:normal;
+    }
+    table.tableGral thead tr:hover
+    {
+        background:#F0F9FC;
+    }
+    table.tableGral th a
+    {
+        color:#000;
+        text-decoration:none;
+        font-weight:normal;
+    }
+    table.tableGral th.tableGralTh
+    {
+        color:#333333;
+        background:#D9EBF9;
+    }
+    table.tableGral th.tableGralTh a
+    {
+        font-weight:bold;
+    }
+	table.tableGral thead td
+	{
+            border:1px solid #F1F1F1;
+            border-bottom:1px solid #DBDBDB;
+            background:#FFF url(graphics/bg_gralTableThTd.jpg) left bottom repeat-x;
+	}
+	table.tableGral td, td.tableGral{
+            padding:5px !important;
+            -padding:3px;
+            padding: 3px;
+            border-bottom:1px solid #E6E6E6;
+        }
+	table.tableGral td a
+        {
+            color:#0283CF;
+            text-decoration:none;
+        }
+	table.tableGral tr.rowsHover, table.tableGral tr:hover
+	{
+            background:#E8F1FF;
+	}
+    .tituloTabla
+    {
+        background:#F5F5F5;
+        border-bottom:1px solid #DFDFDF;
+        padding:5px 5px 5px 7px;
+    }
+/***/
+
+table.tableGral2
+{
+    display:table;
+    padding:0px;
+    margin:0 0 10px 0;
+    border:none;
+    width:100%!important;
+    width:99%;
+    border:1px solid #BDD7A2;
+}
+    table.tableGral2 th
+    {
+        color:#517F07;
+        border-bottom:1px solid  #B0CF8E;
+        background:#D8EFB3;
+        padding:7px 5px 7px 5px;
+        text-align:left;
+    }
+    table.tableGral2 thead tr:hover
+    {
+        background:#F0F9FC;
+    }
+    table.tableGral2 th a
+    {
+        color:#000;
+        text-decoration:none;
+        font-weight:normal;
+    }
+    table.tableGral2 th.tableGralTh
+    {
+        color:#333333;
+        background:#D9EBF9;
+    }
+    table.tableGral2 th.tableGralTh a
+    {
+        font-weight:bold;
+    }
+    table.tableGral2 td{
+        padding:5px !important;
+        -padding:3px;
+        padding: 3px;
+        border-bottom:1px solid #D8EFB3;
+        background:#F3FFDF;
+    }
+    table.tableGral2 td a
+    {
+        color:#0283CF;
+        text-decoration:none;
+    }
+
+table.tableGral3
+{
+    display:table;
+    padding:3px;
+    margin:0 0 1px 0;
+    border:1px solid #B6DCEF;
+    width:450px!important;
+    width:450px;
+    /*border-left:1px solid #B6DCEF;
+    border-top:1px solid #B6DCEF;*/
+}
+table.tableGral3 th
+{
+    border-bottom:1px solid #B6DCEF;
+    color:#0089B3;
+    background:#F0F0F0;
+    padding:3px 1px 3px 1px;
+    margin-right:10px;
+}
+table.tableGral3 th a
+{
+    color: #FF6600;
+}
+table.tableGral3 td
+{
+    padding:5px !important;
+    -padding:3px;
+    padding: 3px;
+    border:1px solid #B6DCEF;
+}
+table.tableGral3 td a
+{
+    color: #FF9900;
+    text-decoration:none;
+}
+table.tableGral3 td.tableGralTh
+{
+    color:#333333;
+    background:#FFFFC1;
+}
+table.tableGral3 td#central
+{
+    border-left:none;
+    border-right:none;
+}
+table.tableGral3 td.hourAsigned
+{
+    color:#048FC2;
+}
+table.tableHoras
+{
+    display:table;
+    padding:0px;
+    margin:0 0 10px 0;
+    border:none;
+    width:100%!important;
+    width:99%;
+    border-bottom:1px solid #DDD;
+    border-left:1px solid #DDD;
+}
+table.tableHoras td table
+{
+    border-left:0px solid #CCC;
+}
+table.tableHoras th
+{
+    border-top:1px solid #DDD;
+    border-right:1px solid #DDD;
+    padding:5px 1px;
+    background:#F9F9F9 url(graphics/bg_btnFree.gif) 0 3px repeat-x;
+    color: #006699;
+}
+table.tableHoras th table td
+{
+    border-top:0px solid #DDD;
+    border-right:1px solid #DDD;
+}
+table.tableHoras td
+{
+	border-top:1px solid #DDD;
+	border-right:1px solid #DDD;
+	padding:0px;
+}
+table.tableHoras td.daysTitles
+{
+	background:#F9F9F9;
+	font-weight:bold;
+	text-align:center;
+    padding: 2px 0 2px 0;
+}
+table.tableHoras td.hours
+{
+	background: #ECF5F9;
+	text-align:center;
+}
+table.tableHoras td span { display:block; padding:5px;}
+table.tableHoras td.title {	padding:5px; background:#F9F9F9; }
+table.tableHoras td table td
+{
+	padding:3px 2px 3px 2px;
+	border-right:1px solid #DDD;
+	border-top:0px solid #CCCCCC;
+	border-bottom:0px solid #CCCCCC;
+	/*background:#FFFFD7;*/
+}
+.tableHoursHead
+{
+    background:#0089B3;
+    color:#FFFFFF;
+    width:100% !important;
+    width:99%;
+}
+.tableHoursHead td
+{
+    padding:3px;
+}
+/* Clases para paginador */
+.pager
+{
+	float:right;
+	padding:2px 5px;
+}
+	.pager li
+	{
+		display:inline;
+		margin:0 2px 0 0;
+		padding:0;
+	}
+	.pager li a
+	{
+		border:1px solid #E6E6E6;
+		color:#0F5A84;
+		padding:3px 8px 3px 8px;
+		text-decoration:none;
+	}
+	.pager li a:hover
+	{
+		background:#F0F0F0;
+		color:#2B3847;
+	}
+	.pager li a.pageActive
+	{
+		border:1px solid #73C6DD;
+		background:#DFF1FF;
+		font-weight:normal;
+	}
+	.pager li a.pagMoving
+	{
+		font-size:13px;
+		padding:1px 8px 2px 8px;
+	}
+	.pager li span {
+		padding:0 10px 0 0;
+	}
+
+/* Estilos auxiliares */
+.bugsFloats
+{
+	clear:both;
+	display:block;
+}
+.txtOthers
+{
+	color:#2E89BC;
+}
+.noColor
+{
+	color:#FFF;
+}
+.guideSys
+{
+	float:right;
+	padding:15px 10px 10px 10px;
+	color:#D26001;
+	text-decoration:none;
+}
+	.guideSys a
+	{
+		color:#D26001;
+		text-decoration:none;
+		border-bottom:1px dashed #E9A87C;
+	}
+.titNotesGreen {
+	color:#6ABD33;
+	font:bold 13px  "Trebuchet MS", "Century Gothic", Georgia;
+	margin-bottom:15px;
+	letter-spacing:1px;
+	}
+.blockContact
+{
+	 border:1px dashed #F8E189;
+	 padding:5px;
+	 margin-bottom:10px;
+	 background:#FFFFC1;
+}
+.right {
+	float:right;
+}
+.subtitle
+{
+	color:#048FC2;
+	display:block;
+	padding:5px 0 10px 0;
+}
+.bgDays
+{
+    background: url(graphics/bg_hours.gif) center top no-repeat;
+	width:93px;
+	height:17px;
+	line-height:7px;
+	padding:0;
+	font-weight:bold;
+    text-align:center;
+}
+/* Estilo para el alineado del content */
+#Container div.content
+{
+	margin-left:206px;
+}
+/* Estilos para los estados de disponibilidad*/
+/* clases para estados de citas*/
+.statusPending
+{
+	color: #FF910F;
+	font-weight:bold;
+}
+.statusConfirm
+{
+	color:#0066CC;
+	font-weight:bold;
+}
+.statusCancel
+{
+	color:#CC0000;
+	font-weight:bold;
+}
+.statusServed
+{
+	color:#009900;
+	font-weight:bold;
+}
+.statusSolicit
+{
+	background:#FBEC88;
+}
+.statusDisabled, .statusDisabled:hover, .statusDisabled:focus
+{
+	background: #DDDDDD;
+}
+
+/* Clases para titulos principales */
+.h1Title
+{
+	background: #FFFFFF url(graphics/bg_h1.jpg) left bottom repeat-x;
+	padding:10px 10px 10px 18px;
+	border-bottom:1px solid #E0E0E0;
+	border-left:1px solid #E0E0E0;
+	color:#535353;
+	font:normal 20px Arial, Helvetica, sans-serif;
+	letter-spacing:0px;
+    overflow: hidden;
+    width: 96.5%
+}
+.spanTitle
+{
+	float: right;
+    font-size: 12px
+}
+
+/* Estilos para cuadro de busquedas */
+.searchProcess
+{
+	height:39px;
+	display:block;
+	background: url(graphics/bg_searchDown.gif) -3px 0px no-repeat;
+	color:#CCCCCC;
+}
+.searchLeft
+{
+	float:left;
+	width:auto;
+	padding:5px;
+}
+.searchRight
+{
+	float:right;
+	width:auto;
+	padding:5px;
+}
+
+/* Clases para los mensajes de respuesta "confirmacion" y "notificacion" */
+.msgConfirm
+{
+	border:1px solid #6BD700;
+	color:#009900;
+	background:#E9FFD2 url(graphics/ico_confirm.png) 5px 3px no-repeat;
+	padding:5px 5px 15px 60px;
+	margin-bottom:15px;
+	line-height:15px;
+}
+	.msgConfirm .closeMsg
+	{
+		background:#E9FFD2;
+		font-family:Arial, Helvetica, sans-serif;
+	}
+	.msgConfirm p
+	{
+		margin:4px 0 0 0;
+	}
+.msgNotify
+{
+	border:1px solid #F8E189;
+	color:#F5AE0A;
+	background:#FFFFC1 url(graphics/ico_warning.png) 5px 3px no-repeat;
+	padding:5px 5px 15px 60px;
+	margin-bottom:15px;
+	line-height:15px;
+}
+	.msgNotify .closeMsg, .msgNotify .closeMsg2
+	{
+		background:#FFFFC1;
+		color:#FFFFFF;
+		font-family:Arial, Helvetica, sans-serif;
+	}
+	.msgNotify p
+	{
+		margin:4px 0 0 0;
+	}
+.closeMsg, .closeMsg2
+{
+	float:right;
+	padding:0px 3px;
+	font-weight:bold;
+	cursor:pointer;
+	color:#FFFFFF;
+	}
+.msgError
+{
+	border:1px solid #EF0000;
+	color:#EF0000;
+	padding:5px 5px 15px 35px;
+	margin-bottom:15px;
+	line-height:15px;
+	background: #FFE8E8 url(graphics/img_warning.png) 10px 10px no-repeat;
+}
+.msgError p {
+	padding:5px 0;
+}
+/* Clases para bloques dentro del fieldset ejm: profesion */
+.blockFsAditional
+{
+	 padding:5px 0 5px 0;
+	 background:#F9F9F9;
+	 border:1px solid #F1F1F1;
+}
+
+/* Clases para columnas de pantalla inicial */
+.columnDashBoard
+{
+	width:48%;
+	padding:5px;
+	float:left;
+	overflow:hidden;
+	margin-bottom:15px;
+	margin-right:5px;
+	height:auto;
+	}
+.blockDashBoard
+{
+	margin:0 0 15px 0;
+	border-bottom:0px solid #E0EEF5;
+	padding:0px;
+}
+.titBlockDasBoard
+{
+	background: url(graphics/bg_menu.jpg) left top repeat-x;
+	border-bottom:1px solid #2E7198;
+}
+	.titBlockDasBoard h2
+	{
+		color:#FFFFFF;
+	}
+	#Content #ContentBody div.titBlockDasBoard h2 a{
+		color: #FFFFCC;
+	}
+	#Content #ContentBody div.titBlockDasBoard h2 a:hover{
+		color: #FFFFCC;
+		text-decoration:underline;
+	}
+.extendido
+{
+     overflow:auto;
+}
+/* Clases para estilos de botones*/
+.btnActionSave
+{
+    display:inline-block;
+    background:none;
+    margin:0;
+    padding:3px 0;
+    border-width:0;
+    overflow:visible;
+    font:100%/1.2 Arial,Sans-serif;
+    text-decoration:none;
+    color:#FFF;
+    font-weight:normal;
+}
+    .btnActionSave span
+    {
+        background:#ddd url(graphics/bg_menu.jpg) repeat-x 0 0;
+        margin:0;
+        padding:3px 0;
+        border-left:1px solid #27A9D7;
+        border-right:1px solid #0083B0;
+    }
+    .btnActionSave span span
+    {
+        position:relative;
+        padding:3px 1.0em;
+        border-width:0;
+        border-top:1px solid #27A9D7;
+        border-bottom:1px solid #0083B0;
+    }
+.btnActionReturn, .btnActionReturn:hover
+{
+    display:inline-block;
+    overflow:visible;
+    font:100%/1.2 Arial,Sans-serif;
+    text-decoration:none;
+    color:#FFF;
+    font-weight:normal;
+    position:relative;
+    padding:3px 1.0em;
+    background: url(graphics/bg_btnCancel.gif) repeat-x 0 0;
+    margin:0;
+    border-top:1px solid #A6A6A6;
+    border-bottom:1px solid #828282;
+    border-left:1px solid #A6A6A6;
+    border-right:1px solid #828282;
+}
+.btnActionReturn:hover
+{
+	border-top:1px solid #333;
+	border-right:1px solid #555;
+	border-bottom:1px solid #555;
+	border-left:1px solid #666;
+	color:#000;
+}
+.btnActionConfirm
+{
+    display:inline-block;
+    background:none;
+    margin:0;
+    padding:3px 0;
+    border-width:0;
+    overflow:visible;
+    font:100%/1.2 Arial,Sans-serif;
+    text-decoration:none;
+    color:#FFF;
+    font-weight:normal;
+}
+    .btnActionConfirm span
+    {
+        background: url(graphics/bg_btnOk.gif) repeat-x 0 0;
+        margin:0;
+        padding:3px 0;
+        border-left:1px solid #90DA69;
+        border-right:1px solid #4B9E21;
+    }
+    .btnActionConfirm span span
+    {
+        position:relative;
+        padding:3px 1.4em;
+        border-width:0;
+        border-top:1px solid #90DA69;
+        border-bottom:1px solid #4B9E21;
+    }
+.btnActionDelete
+{
+    display:inline-block;
+    background:none;
+    margin:0;
+    padding:3px 0;
+    border-width:0;
+    overflow:visible;
+    font:100%/1.2 Arial,Sans-serif;
+    text-decoration:none;
+    color:#FFF;
+    font-weight:normal;
+}
+    .btnActionDelete span
+    {
+        background: url(graphics/bg_btnDelete.gif) repeat-x 0 0;
+        margin:0;
+        padding:3px 0;
+        border-left:1px solid #E58585;
+        border-right:1px solid #A91D1D;
+    }
+    .btnActionDelete span span
+    {
+        position:relative;
+        padding:3px 1.0em;
+        border-width:0;
+        border-top:1px solid #E58585;
+        border-bottom:1px solid #A91D1D;
+    }
+
+.btnActionLogin
+{
+    display:inline-block;
+    background:none;
+    margin:0;
+    padding:3px 0;
+    border-width:0;
+    overflow:visible;
+    font:100%/1.2 Arial,Sans-serif;
+    text-decoration:none;
+    color:#FFF;
+    font-weight:normal;
+}
+    .btnActionLogin span
+    {
+        background:#037099 url(graphics/bg_btnLogin.gif) repeat-x 0 0;
+        margin:0;
+        padding:3px 0;
+        border-left:1px solid #03678D;
+        border-right:1px solid #03678D;
+    }
+    .btnActionLogin span span
+    {
+        position:relative;
+        padding:3px 1.4em;
+        border-width:0;
+        border-top:1px solid #03678D;
+        border-bottom:1px solid #03678D;
+    }
+  /* Start custom button CSS here
+    ---------------------------------------- */
+    .btnActionFree
+    {
+      display:inline-block;
+      background:none;
+      margin:0;
+      padding:3px 0;
+      border-width:0;
+      overflow:visible;
+      font:100%/1.2 Arial,Sans-serif;
+      text-decoration:none;
+      color:#0089B3;
+	  font-weight:normal;
+      }
+
+	 * html button.btnActionFree,
+	 * html button.btnActionSave,
+	 * html button.btnActionReturn,
+	 * html button.btnActionConfirm,
+	 * html button.btnActionDelete,
+     * html button.btnActionLogin
+	 {
+      padding-bottom:1px;
+      }
+	/*
+    html:not([lang*=""]) button.btnActionFree,
+	html:not([lang*=""]) button.btnActionSave,
+	html:not([lang*=""]) button.btnActionReturn,
+	html:not([lang*=""]) button.btnActionConfirm,
+	html:not([lang*=""]) button.btnActionDelete,
+    html:not([lang*=""]) button.btnActionLogin
+	 {
+		margin:0 -3px;
+    }
+    */
+    .btnActionFree span
+    {
+      background:#ddd url(graphics/bg_btnFree.gif) repeat-x 0 0;
+      margin:0;
+      padding:3px 0;
+      border-left:1px solid #bbb;
+      border-right:1px solid #aaa;
+      }
+
+	* html .btnActionFree span,
+	* html .btnActionSave span,
+	* html .btnActionReturn span,
+	* html .btnActionConfirm span,
+	* html .btnActionDelete span,
+    * html .btnActionLogin span
+    {
+      padding-top:0;
+      }
+
+    .btnActionFree span span {
+        position:relative;
+        padding:3px 1.4em;
+        border-width:0;
+        border-top:1px solid #bbb;
+        border-bottom:1px solid #aaa;
+
+    }
+    .btnActionFree:hover span,
+	.btnActionFree:hover span span,
+	.btnActionFree:focus span,
+	.btnActionFree:focus span span
+	{
+		cursor:pointer;
+		border-color:#666 !important;
+		color:#009ACF;
+	}
+	.btnActionSave:hover span, .btnActionReturn:hover span, .btnActionConfirm:hover span, .btnActionDelete:hover span, .btnActionLogin:hover span
+	{
+	 	cursor:pointer;
+		border-color:#666 !important;
+	}
+
+    .btnActionFree:active span,
+	.btnActionSave:active span,
+	.btnActionReturn:active span,
+	.btnActionConfirm:active span,
+	.btnActionDelete:active span,
+    .btnActionLogin:active span
+	{
+        background-position:0 -400px;
+        outline:none;
+    }
+    .btnActionFree:focus, .btnActionFree:active {
+        outline:none;
+    }
+.btnAction, .btnAction:hover
+{
+	background:#DEDEDE url(graphics/bg_btnFree.gif) left top repeat-x;
+	border-top:1px solid #BBB;
+	border-right:1px solid #AAA;
+	border-bottom:1px solid #AAA;
+	border-left:1px solid #BBB;
+	padding:1px 1.4em 1px 1.4em;
+	color:#09789F;
+        margin-left:10px;
+}
+.btnAction:hover
+{
+	border-top:1px solid #888;
+	border-right:1px solid #777;
+	border-bottom:1px solid #777;
+	border-left:1px solid #888;
+	color:#005E7F;
+}
+.btnActionSupr, .btnActionSupr:hover
+{
+	/*background:#DEDEDE url(graphics/bg_btnFree.gif) left top repeat-x;*/
+	background: url(graphics/bg_btnDelete.gif) repeat-x 0 0;
+	border-top:1px solid #EF8686;
+	border-right:1px solid #8F0000;
+	border-bottom:1px solid #8F0000;
+	border-left:1px solid #EF8686;
+	padding:1px 1.4em 1px 1.4em;
+	color:#FFF;
+    margin-left:10px;
+    float: right;
+}
+.btnActionSupr:hover
+{
+	border-top:1px solid #333;
+	border-right:1px solid #555;
+	border-bottom:1px solid #555;
+	border-left:1px solid #666;
+	color:#000;
+}
+.btnLogin, .btnLogin:hover
+{
+	background:#DEDEDE url(graphics/bg_btnLogin.gif) left top repeat-x;
+	border-top:1px solid #33A6CF;
+	border-right:1px solid #03678D;
+	border-bottom:1px solid #03678D;
+	border-left:1px solid #33A6CF;
+	padding:1px 1.4em 1px 1.4em;
+	color:#FFF;
+    margin-left:10px;
+}
+.btnLogin:hover
+{
+	border-top:1px solid #33A6CF;
+	border-right:1px solid #03678D;
+	border-bottom:1px solid #03678D;
+	border-left:1px solid #33A6CF;
+	color:#B3DFEF;
+}
+
+.btnLeft {
+    float: left;
+}
+
+.btnRight {
+    float: right
+}
+
+.buttonContent {
+    overflow: hidden;
+    width:    100%;
+}
+
+.barEstProm
+{
+	/*background-color:#FFFFFF;*/
+	height:5px;
+	height:21px!important;
+	/*position:absolute;*/
+	float:left;
+	/*-opacity:0.4;
+	-filter:alpha(opacity=40);*/
+	border:0;
+    margin:0;
+}
+.barEstProm img {margin-top:0;}
+
+.barEstPorc
+{
+	background-color:#99CC00;
+	height:5px;
+	/*position:absolute;*/
+	z-index:+2;
+	float:left;
+	display:block;
+	/*opacity:0.6;
+	filter:alpha(opacity=60);*/
+	margin-top:7px;
+	border:0;
+}
+
+table.tableGral5
+{
+	display:table;
+	padding:0px;
+	margin:0;
+	border:none;
+	width:100%!important;
+	width:99%;
+	vertical-align:middle;
+}
+table.tableGral5 th
+{
+	color:#333;
+	border-bottom:1px solid #CEDDFF;
+	background:#F2F6FF;
+	padding:7px 5px 7px 5px;
+	text-align:left;
+	font-weight:normal;
+}
+table.tableGral5 thead tr:hover
+{
+	background:#F0F9FC;
+}
+table.tableGral5 th a
+{
+	color:#000;
+	text-decoration:none;
+	font-weight:normal;
+}
+table.tableGral5 th.tableGral5Th
+{
+	color:#333333;
+	background:#D9EBF9;
+}
+table.tableGral5 th.tableGral5Th a
+{
+	font-weight:bold;
+}
+table.tableGral5 thead td
+{
+	border:1px solid #F1F1F1;
+	border-bottom:1px solid #DBDBDB;
+	background:#FFF url(graphics/bg_gralTableThTd.jpg) left bottom repeat-x;
+}
+
+table.tableGral5 td
+{
+	border-right:0px solid #DBDBDB;
+    margin:0;
+    padding:0;
+}
+ .gris {
+     text-align:left;
+     border-left:1px solid #DFDFDF;
+     background:#F3F3F3;
+
+}
+table.tableGral5 tr:hover td.gris {
+	background:#E8F1FF;
+}
+table.tableGral5 td a
+{
+	color:#0283CF;
+	text-decoration:none;
+}
+table.tableGral5 tr.rowsHover, table.tableGral5 tr:hover
+{
+	background:#E8F1FF;
+}
+.barra
+{
+	padding-bottom:0px;
+	z-index:+1;
+}
+
+ul.leyenda {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+}
+
+ul.leyenda li {
+	font-family:verdana;
+	font-size:9px;
+	line-height:15px;
+	list-style-image:none;
+	/*list-style-position:outside;*/
+	list-style-type:none;
+}
+
+#real {
+	float:left;
+	width:2px;
+	height:16px;
+	margin-top:1px;
+	margin-right:2px
+}
+.calificador {
+	background-color:#fff;
+}
+/*******************************************************
+    Estilos copiados desde default theme default
+*******************************************************/
+.money {
+	color:#008200;
+	padding-bottom:3px;
+	}
+.tableDestino {
+	displya:block;
+	padding:0px 0px 15px 0px;
+}
+.tableDestino table {
+	border:1px solid #F1F1F1;
+	background:#F9F9F9;
+}
+.tableDestino th {
+	background:#FFE89F;
+	padding:7px 13px;
+	text-align:left;
+}
+.tableDestino td {
+	padding:7px 13px 8px 13px;
+}
+.sidebar {
+	background-color:#FFFFFF;
+	border-left:1px solid #B3E3FB;
+	border-right:1px solid #B3E3FB;
+	border:1px solid #B3E3FB;
+}
+.rangePrices {
+	padding:10px 15px 15px 15px;
+}
+
+.pagerBlock {
+	display:block;
+	padding:0px 10px;
+	height:32px;
+	border-bottom:1px solid #E6E6E6;
+	border-top:1px solid #E6E6E6;
+	background: #FCFCFC;
+	}
+.pagerList {
+	float:right;
+	width:450px;
+	text-align:right;
+	height:25px;
+	padding-top:4px;
+}
+.loading {
+	width:200px;
+	color: #FF9900;
+}
+
+.titleParagraph {
+	color:#172C37;
+	font-weight:bold;
+	padding:5px 10px 5px 0px;
+}
+.orderBy {
+	display:block;
+	padding:0px 0 5px 0;
+	border-bottom:5px solid #BDC1BD;
+	margin-top:15px;
+	height:15px;
+}
+	.orderBy a {
+		color: #F76606;
+		text-decoration:none;
+		padding:5px 10px ;
+		border:1px solid #CCCCCC;
+		border-bottom-width:0px;
+	}
+	.orderBy a:hover {
+		text-decoration:underline;
+	}
+	.orderBy a.active {
+		border:1px solid #FFA800;
+		border-bottom-width:0px;
+	}
+/* Estilos para el listado de hoteles */
+#Remembers .listHotel {
+	display:block;
+	padding:5px 0 5px 0;
+	margin-top:0px;
+	background:#F4f4f4;
+	border:1px solid #CCC;
+	height:100%;
+}
+#Remembers h2 span.numMap {
+	background:url(graphics/bg_numMap2.jpg) left 2px no-repeat;
+}
+.listHotel {
+	display:block;
+	padding:5px 0 5px 0;
+	margin-top:5px;
+	margin-bottom:10px;
+	background:#F9F9F9;
+	border:1px solid #E5E5E5;
+	height:100%;
+}
+	.listHotel a, .hotelsRemember a {
+		/*color:#DF4D1B;*/
+		text-decoration:none;
+	}
+	.listHotel a:hover, .hotelsRemember a:hover {
+		text-decoration:underline;
+	}
+	.listHotel h2, .hotelsRemember h2 {
+		color:#0099CC;
+		font:bold 13px Arial, Helvetica, sans-serif;
+		padding:0px 5px 5px 10px;
+		border-bottom:1px solid #E5E5E5;
+	}
+	.listHotel .numMap, .hotelsRemember .numMap {
+		background:url(graphics/bg_numMap.jpg) left 2px no-repeat;
+		color:#FFFFFF;
+		padding:2px 15px 1px 5px;
+		font-size:11px;
+		display:none;
+		float:left;
+	}
+	.hotelsRemember .numMap {
+		background:url(graphics/bg_numMap2.jpg) left 2px no-repeat;
+	}
+	.listHotel .amenitiesOffers, .hotelsRemember .amenitiesOffers {
+		padding:0px 5px 10px 15px;
+		font-size:11px;
+		color:#E68A00;
+	}
+	.listHotel .wrapperList, .hotelsRemember .wrapperList {
+		border-top:1px solid #FFFFFF;
+		display:block;
+		height:100%;
+		padding-top:5px;
+		overflow:hidden;
+	}
+	.priceHotel, .detailHotel,
+	.recordHotel, .photoHotel {
+		float:left;
+		height:auto;
+	}
+	.priceHotel {
+		margin:0 10px 0 9px !important;
+		margin:0 10px 0 5px;
+		padding:7px 0 10px 0;
+		width:80px;
+		color:#999;
+		text-align:center;
+		font-size:0.85em;
+		line-height:120%;
+                padding-right:4px;
+	}
+            .roomsPrice {
+                padding:0px 0px 0px 0px;
+            }
+		.priceHotel span.money
+                {
+			font-size:18px;
+			display:block;
+			line-height:150%;
+			color:#018B01;
+			font-weight:bold;
+		}
+		/*.priceHotel a {
+			font-size:11px;
+			font-weight:bold;
+		}
+		.priceHotel a:hover {
+			text-decoration:none;
+		}*/
+                #Right .priceHotel a:link,
+                #Right .priceHotel a:active,
+                #Right .priceHotel a:visited
+                {
+			font-size:11px;
+			font-weight:bold;
+			color:#000;
+		}
+		* #Right .priceHotel a:hover
+                {
+			text-decoration:none;
+			color:#666;
+			text-decoration:underline;
+		}
+
+	.detailHotel
+        {
+            display:block;
+            font-size:11px;
+            /*min-width:390px;
+            width:390px;*/
+	}
+		.detailHotel .zoneHotel {
+			color:#999;
+			font-size:11px;
+		}
+		.detailHotel .rooms {
+			background:#FFF;
+			margin: 5px 10px 5px 0;
+			border:1px solid #DDD;
+		}
+		.rooms th {
+			border-bottom:1px solid #DDD;
+			padding:5px;
+			text-align:left;
+                        background: #EAEAEA;
+                        white-space: normal;
+		}
+		.rooms td {
+			padding:5px;
+			color:#666;
+                        white-space: normal;
+		}
+		.rooms tfoot td{
+			padding:5px;
+			border-top:1px solid #DDD;
+		}
+		.rooms tr.rows1 td {
+			background:#F0FBFF;
+			border-bottom:1px solid #B5E8FB;
+		}
+		.rooms tr.rows2 td {
+			background:#FFF;
+			border-top:1px solid #EBEBEB;
+			border-bottom:1px solid #EBEBEB;
+		}
+                .rooms tr.rows3 td {
+			background:#FFF;
+			border-bottom:1px solid #EBEBEB;
+		}
+		.rooms td.separatorService {
+			border-left:1px dashed #DDD;
+		}
+		.rooms span {
+			padding:0 10px 5px 10px;
+			margin:0;
+			display:block;
+			font-size:10px;
+			font-weight:bold;
+		}
+	.recordHotel {
+		width:108px;
+		font-size:11px;
+	}
+		.recordHotel p {
+			padding:0 0 5px 0;
+		}
+		.ratingMax {
+			width:76px;
+			background: #CCC;
+			height:15px;
+			z-index:0;
+			margin-bottom:5px;
+		}
+		.rating {
+			 height:15px;
+			 z-index:1;
+			 background:#999;
+			 z-index:1;
+		}
+		.wrapperRating {
+			 float:left;
+			 position:relative;
+			 top:0;
+			 left:0;
+			 width:76px;
+			 height:15px;
+			 z-index:2;
+			 margin-top:-15px;
+			 background:url(graphics/maskScore.gif) left top no-repeat;
+		}
+	.photoHotel {
+		width:86px;
+		text-align:center;
+	}
+		.photoHotel .imgHotel {
+			border:1px solid #CCC;
+			background-color:#FFF;
+			padding:3px;
+			margin-bottom:6px;
+		}
+	.floatLeft {
+		float:left;
+	}
+	.floatRight {
+		float:right;
+	}
+	.compare {
+	 	margin: 0px 0 0 5px;
+		line-height:14px;
+	 }
+
+/* Estilos para la pantalla reservas */
+.reservas {
+	padding:0px;
+	border:1px solid #EAEAEA;
+	background:#F9F9F9;
+	margin:5px 0 10px 0;
+	}
+	.reservas a {
+		color:#DF4D1B;
+	}
+/*Estilos del sidebar*/
+.topSidebar {
+	padding:7px 0 0 5px;
+	background:url(graphics/bg_sidebarTop.gif) left top no-repeat;
+	}
+.bottomSidebar {
+	height:8px;
+	padding:0 0 0 5px;
+	margin-bottom:15px;
+	background:url(graphics/bg_sidebarBottom.gif) left top no-repeat;
+	}
+.bordeTop {
+	border-top:1px solid #DBF1FD;
+	}
+.bordeTopBottom {
+	border-top:1px solid #B4E3FB;
+	border-bottom:1px solid #B4E3FB;
+	background-color:#EEF9FE;
+	}
+.btnEditSearch {
+	background:url(graphics/bg_editSearch.gif) center top no-repeat;
+	text-align:center;
+	display:block;
+	padding:8px 10px 10px 10px;
+	color:#FFFFFF;
+	margin:2px 0 5px 0;
+	cursor:pointer;
+}
+.rangePrices {
+	padding:10px 15px 15px 15px;
+}
+.sText {
+	background-color:#FFFFFF;
+	border:1px solid #FFAC14;
+}
+.btnUpdateSearch {
+	background:#DB4319;
+	border:1px solid #C54418;
+	color:#FFFFFF;
+	padding:3px 10px;
+}
+.advancedLink {
+	color: #FFAC12;
+	padding-top:5px;
+	font:normal 12px Arial, Helvetica, sans-serif;
+}
+.subtitle {
+	border-bottom:1px solid #EFEFEF;
+}
+.details {
+	display:none;
+}
+.descriptionHotel {
+	margin-top:5px;
+	background: #F9f9f9;
+	border-bottom:1px solid #f1f1f1;
+	padding:10px;
+}
+	.descriptionHotel .imgHotel {
+		padding:0 10px 10px 0;
+	}
+.return {
+	float:right;
+	color:#CC0000;
+	margin-top:5px;
+	background: url(graphics/bg_btnReturnList.jpg) left top no-repeat;
+	width:111px;
+	padding: 4px 10px 4px 25px;
+}
+.notPadding {
+	padding:0;
+}
+.notMargin {
+	margin:0;
+}
+
+/* id sueltos */
+#comparador {}
+#sliderMin1, #sliderMin2  {
+	float:left;
+}
+#sliderMax1, #sliderMax2 {
+	float:right;
+}
+.btnElegir {
+	text-align:center;
+	background: #F90 url(graphics/bg_btnSelect.jpg) left top no-repeat;
+	width:71px;
+	height:18px;
+	display:block;
+	font-weight:bold;
+	line-height:16px;
+	margin-left:auto;
+	margin-right:auto;
+	}
+.btnElegir2 {
+	text-align:center;
+	background: #F90 url(graphics/bg_btnSelect2.jpg) left top no-repeat;
+	width:71px;
+	height:18px;
+	display:block;
+	font-weight:bold;
+	line-height:16px;
+	margin-left:auto;
+	margin-right:auto;
+	}
+.btnElegir3 {
+    text-align: center;
+    background: #CCC url(graphics/btnSelect_left3.jpg) left top no-repeat;
+    width:71px;
+    height:25px;
+    display:block;
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btnElegir4 {
+    text-align: center;
+    background: #CCC url(graphics/btnSelect_left4.jpg) left top no-repeat;
+    width:71px;
+    height:25px;
+    display:block;
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a.btnSelectHotel {
+	background:transparent url(graphics/btnSelect_left.jpg) no-repeat scroll left top;
+	color:#FFF;
+	font-size:11px !important;
+	font-weight:bold;
+	padding:7px 0 12px 22px;
+	text-decoration:none;
+	margin-left:auto;
+	margin-right:auto;
+	text-transform:uppercase;
+        line-height: 30px;
+}
+a.btnSelectHotel span {
+	background:transparent url(graphics/btnSelect_right.jpg) no-repeat scroll right top;
+	padding:7px 20px 12px 0;
+        margin-top:-7px;
+}
+
+a.btnSelectHotel2 {
+	background:transparent url(graphics/btnSelect_left2.jpg) no-repeat scroll left top;
+	color:#FFF;
+	font-size:11px !important;
+	font-weight:bold;
+	padding:3px 0 10px 18px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+a.btnSelectHotel2 span {
+	background:transparent url(graphics/btnSelect_right2.jpg) no-repeat scroll right top;
+	padding:3px 15px 10px 0;
+        margin-top: -3px;
+}
+.galleryHotel {
+	border:5px solid #FFF;
+}
+.commentsExtras {
+	font-size:10px;
+	color: #FEAD15;
+	padding-top:3px;
+	}
+.titleSections {
+	font-size:13px;
+	color:#09C;
+	padding:5px 0px;
+	border-bottom:1px dashed #C5E1F1;
+	}
+.cancellationPolicy {
+	padding:8px 10px 10px 10px;
+	/*background:#FFF9C6;*/
+	/*background:url(graphics/bg_reservationPolicies.gif) 10px 0 no-repeat;*/
+}
+.policies {
+	border:1px solid #8BDAF8;
+	/*border-top:none;*/
+	background:#F2FAFD;
+}
+/** Estilo de montos en rojo**/
+.mountWarning {
+    color: #CF0000;
+}
+/****/
+
+.accesosUsuarios li
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+    border:none;
+}
+/*Mensajes flashMessages*/
+.msgBlue{ background-color:#bfdeff; border:1px solid #3399ff; padding:10px }
+.msgRed{ background-color:#ffcccc; border:1px solid #cc0000; padding:10px }
+.msgYellow{ background-color:#FFF7CB; border:1px solid #FFE0A0; padding:10px }

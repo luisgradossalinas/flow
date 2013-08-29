@@ -1,0 +1,8 @@
+Tamaño de foto normal
+190x218 pixeles
+
+Tamaño de foto grande
+350x382 pixeles
+
+
+

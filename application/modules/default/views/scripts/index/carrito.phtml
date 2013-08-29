@@ -1,0 +1,115 @@
+<script>
+$(document).ready(function(){
+    
+    $("#cart_summary input:text").numeric({ decimal: false, negative : false});
+    
+       $('#cart_summary input:text').keyup(function(e) {
+           
+           cantidad = ($(this).val());
+           id = $(this).attr('id');
+           producto = id.split('_');
+           id_producto = producto[1];
+           precio = producto[2];
+           
+           /*if (cantidad == 0)
+           {
+               if (confirm("¿Está seguro de que no quiere este producto, para quitarlo del carrito?"))
+               {
+                   window.location.href = urls.siteUrl + '/producto/eliminar/id' + id_producto;
+               }
+              
+           }*/
+           
+        $.ajax({
+            url: urls.siteUrl + '/producto/add-carrito/',
+            dataType:'json',
+            type:'post',
+            data: {id:id_producto,cantidad:cantidad,precio:precio},
+            success: function(result)
+            {
+                $("#subtotal_"+id_producto).empty().html("s/ " + result.subtotal + ".00");
+                $(".cart_total_price .price").empty().html("s/ " + result.total+ ".00");
+                //Calcular subtotal, IGV y total con datos del navegador.
+            }
+        })
+        
+    
+    if(e.keyCode == 13) {
+        //$('#formCarrito').submit();
+    }
+    
+    })
+    
+
+})    
+</script>
+<div class="breadcrumb">
+	<a href="<?php echo SITE_URL; ?>" title="Volver a Inicio">Inicio</a><span class="navigation-pipe">&gt;</span><span class="navigation_end">Su carrito</span>
+</div>
+<h2 class="category_title">Resumen de su carrito</h2>
+			<p>Su carrito tiene <?=count($this->carrito)?> producto(s)</p>
+              
+<div id="order-detail-content" class="table_block">
+
+    <table id="cart_summary" class="std">
+	<thead>
+	<tr>
+		<th class="cart_product first_item">Producto</th>
+		<th class="cart_description item">Descripci&oacute;n</th>
+		<th class="cart_unit item">Precio</th>
+		<th class="cart_quantity item" colspan="2">Cantidad</th>
+		<th class="cart_total last_item">Total</th>
+	</tr>
+	</thead>
+        
+        <tbody> 
+        <?php if (count($this->carrito) > 0) {?>
+        <?php foreach ($this->carrito as $row) { ?>
+	<tr class="last_item cart_item">
+	<td class="cart_product">
+            <a href="<?=SITE_URL.'/images/large/'.$row['imagen']?>" title="<?=$row['nom_prod']?>"  class="thickbox" rel="gallery-plants">
+            <img src="<?=SITE_URL.'/images/small/'.$row['imagen']?>" width="45" height="45" /></a>
+	</td>
+	<td class="cart_description">
+	<h5><?=$row['nom_prod']?></h5>
+	</td>
+	<td class="cart_unit">
+	<span class="price">s/ <?=$row['precio']?></span>
+	</td>
+	<td class="cart_quantity">
+            <input type='text' name="cant[]" value="<?=$row['cantidad']?>" id="cantidad_<?=$row['id_prod']?>_<?=$row['precio']?>" size="1" maxlength="2"  />
+	</td>
+	<td>
+            <a class="cart_quantity_delete" href="<?=SITE_URL.'/producto/eliminar/id/'.$row['id_prod']?>" title="Eliminar" onclick="return confirm('¿Está seguro de eliminar el producto?');"><img src="<?=SITE_URL.'/images/icons/delete.gif'?>" alt="Eliminar" class="icon" /></a>
+	</td>
+	<td class="cart_total">
+	<span class="price" id="subtotal_<?=$row['id_prod']?>">
+            s/ <?=$row['subtotal']; ?>
+        </span>
+	</td>
+        </tr>	
+        <?php } ?>
+        <?php } ?>
+        </tbody>
+        
+        <tfoot>
+	<tr class="cart_total_price">
+	<td colspan="5"><span class="price">Total:</span></td>
+	<td class="price">s/ <?=$this->total?>.00</td>
+	</tr>	
+       <!-- <tr class="cart_total_delivery">
+	<td colspan="5">IGV (18%):</td>
+	<td class="price">s/ 7.00</td>
+	</tr>											
+	<tr class="cart_total_voucher">
+	<td colspan="5">Subtotal:</td>
+	<td class="price">s/ 0.00</td>
+	</tr> -->
+  	</tfoot>
+	</table>
+    
+<p class="cart_navigation">
+    <a title="Siguiente" class="exclusive" href="">Siguiente »</a>
+	<a title="Continuar la compra" class="button_large" href="<?=SITE_URL?>">« Continuar la compra</a>
+</p>
+</div>

@@ -1,0 +1,64 @@
+<? $urlPP = $this->url(array('slug' => $this->slug), 'perfil_publico', true); ?>
+<table cellspacing="0" border="0" cellpadding="0" width="750">
+	<tr><td>&nbsp;</td></tr>
+    <tr>
+        <td valign="top" align="center" colspan="2" style="text-align: center">
+            <table width="100%" style="margin: 10px 0px 0px 10px" align="center" border="0">
+                <tr>
+                    <td align="center" style="color:#5a5658; font-family: Arial, Helvetica, sans-serif; font-weight:bold;font-size:36px; line-height:1">
+                        <span style="color:#000000;font-size:44px; line-height:1"><span><?= $this->nombre?></span>, ya eres parte de APTiTUS</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<table cellspacing="6" border="0" cellpadding="0" width="750">
+    <tr>
+        <td align="center" width="100%" style="font-size:19px;padding:10px 30px; font-family: Arial, Helvetica, sans-serif; text-align:center">
+        	<span>Ahora perteneces al portal de empleos m&aacute;s importante del Per&uacute;: <a href="http://aptitus.pe" style="text-decoration:none; color:#007FD2">www.aptitus.pe</a></span><br/>
+            <span>donde encontrar&aacute;s las mejores ofertas de trabajo, de las m&aacute;s prestigiosas</span><br/>
+            <span>empresas del pa&iacute;s</span>.
+        </td>
+    </tr>
+    <tr>    
+        <td align="center" width="100%" style="font-size:19px; font-family: Arial, Helvetica, sans-serif; padding:10px 30px; text-align:center">
+            <span>Tus datos de acceso son:</span><br/>
+            <span>Usuario : <span style="text-decoration:none; color:#007FD2"><?= $this->user ?></span></span>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="padding-left:20px;">
+            <table width="92%" cellspacing="5" border="0" cellpadding="2" style="font-size:14px;">
+                <tr>
+                    <td valign="top" width="2%">&raquo;</td>
+                    <td valign="top" width="45%" style="font-family: Arial, Helvetica, sans-serif;">Ya cuentas con tu <a href="#" style="color: #007FD2; text-decoration:underline">Perfil P&uacute;blico</a>, el cual puedes compartir 
+                        con quien desees y podr&aacute;s acceder a &eacute;l directamente en :<br />
+                        <a style="color: #007FD2; text-decoration:underline" href="<?=SITE_URL?><?= $urlPP ?>" ><?=SITE_URL?><?= $urlPP ?></a></td>                                                
+                        
+                        
+                    <td valign="top" width="2%">&raquo;</td>
+                    <td valign="top" width="45%" style="font-family: Arial, Helvetica, sans-serif;">
+                    Te aconsejamos mantener siempre actualizado tu perfil en el portal, es muy importante.
+Mientras m&aacute;s completo est&eacute; tu perfil, tendr&aacute;s m&aacute;s oportunidades de ser 
+considerado en tus postulaciones.<br /><br />                                            
+                        <a style="color: #007FD2;" href="<?=SITE_URL?><?= $this->url(array('controller' => 'buscar', 'action' => 'index'), 'default', true) ?>" >Ver m&aacute;s ofertas de trabajo</a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<table align="center" cellspacing="0" cellpadding="0" border="0" width="750">
+    <tr>
+        <td>
+            <table style="border-left-color: #fff; border-top-color: #fff; border-bottom: #fff 1px solid; border-right-color: #fff" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td align="left" width="750" style="padding-left:30px; font-family: Arial, Helvetica, sans-serif; padding-bottom:10px;"><h1 style="padding-right: 0px; padding-left: 20px; font-family:'Arial, Helvetica, sans-serif';font-weight: bold; font-size: 20px; margin: 0px; color: #222222; padding-top: 10px; padding-bottom: 10px;">
+                        <span style="color:#232222; font-weight:normal; font-size:24px; font-family: Arial, Helvetica, sans-serif">&iexcl;&Eacute;xitos!</span><br/>
+                        <span style="color:#000000; font-family: Arial, Helvetica, sans-serif"> El equipo APTiTUS</span> </h1>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

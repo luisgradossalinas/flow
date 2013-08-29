@@ -1,0 +1,19 @@
+<div class="breadcrumb">
+	<a href="<?php echo $this->staticUrl; ?>" title="Volver a Inicio">Inicio</a><span class="navigation-pipe">&gt;</span><span class="navigation_end"><?php echo $this->nombre_categoria;?></span>
+</div>
+<h2 class="category_title"><?php echo $this->nombre_categoria;?><span><?php echo $this->cant_descripcion;?> </span></h2>
+<br />
+<ul id="lstProducto">
+<?php
+foreach ($this->productos as $productos)
+{
+    $imagen = SITE_URL."/images/small/".$productos["imagen"];
+    $imagenLarge = SITE_URL."/images/large/".$productos["imagen"];
+    echo '<li class="ajax_block_product"><a href='.$imagenLarge.' title="'.$productos["nom_prod"].'"  class="thickbox" rel="gallery-plants"><img src="'.$imagen.'" alt="'.$productos["nom_prod"].'">';
+    echo '</a><h5><center><a href="" title="'.$productos["nom_prod"].'" >'.substr($productos["nom_prod"],0,60).'</a><center></h5>';
+    echo '<span class="price">Precio: s/ '.$productos["precio"].'</span>';
+    echo '<p align=center><a class="exclusive_link"  href="'.SITE_URL.'/producto/'.$productos["id"].'" title="Añadir al carrito"><img src="'.SITE_URL.'/images/icons/addcarrito.jpg"></a>';
+    echo '</p></li>';
+ }
+ ?>    		   
+</ul>

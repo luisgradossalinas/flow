@@ -1,0 +1,104 @@
+* /*Todo*/
+{ 
+padding:0px; 
+margin:0px;
+}
+
+body 
+{
+padding:0px; 
+margin:0px;
+font: normal 12px Arial,tahoma;
+}
+
+#container 
+{
+display:block;
+width:100%;
+height: 100%;
+padding:0px;
+margin:0px;
+}
+
+#head-login 
+{
+margin:0px;
+padding: 15px 0 0 15px;
+display:block;
+height: 70px;
+background-color:#CD0707;
+color:#FFFFFF;
+margin-bottom: 25px;
+border-top:6px solid #CD0707;
+border-bottom:1px solid #ddd;
+}
+
+#login 
+{
+width:300px;
+margin-left:auto;
+margin-right: auto;
+padding:10px;
+border:1px solid red;
+margin-bottom: 15px;
+color: #999;            
+}
+
+#login label 
+{
+font-size: 16px;
+font-weight: bold;
+margin: 5px;
+color:#999;
+}
+
+#login input 
+{
+border:1px solid #CCC;
+margin: 5px;
+padding: 5px;
+}
+
+#login .inpt 
+{
+width:200px;
+}
+
+#login .btn 
+{
+color:#FFF;
+background-color: #CD0707;
+padding: 5px 10px;
+border:1px solid #454545;
+}
+ 
+.bolder 
+{
+color:#FFFFFF;
+font-weight: bolder;
+}
+
+.center 
+{
+text-align: center
+}
+
+.copyright 
+{ 
+font-size: 11px; 
+color: #999; 
+}
+
+.titLogin 
+{
+background-color: #CD0707;
+}
+
+body #login form dd em 
+{
+font-size: 11px;
+padding-bottom: 15px;
+display: block;
+color:#CC0000;
+padding-left: 5px;
+}

@@ -1,0 +1,26 @@
+<style>
+.zend_form input[type=text], 
+.zend_form input[type=password]
+{ width:200px; }
+.zend_form textarea{ width: 300px; height:100px; }
+.zend_form .line{ margin:10px 0; display: block; clear: both;}
+.zend_form .line dt, .zend_form .line dd{ display:inline-block; vertical-align:middle; }
+.zend_form .line dt, .zend_form .line dd{ float:left;width:500px }
+.zend_form .line dt{ width:200px; }
+.zend_form ul.errors{ display:inline; margin:0; padding:0; list-style:none }
+.zend_form ul.errors li{ margin:0; padding:0 }
+#form-registro-usuario ul.errors li {float:right;height:20px;width: 280px;color:#CC0000;}
+</style>
+<div id="center_column" class="center_column">
+<div class="breadcrumb">
+	<a href="<?php echo SITE_URL; ?>" title="Volver a Inicio">Inicio</a><span class="navigation-pipe">&gt;</span><span class="navigation_page">Regístrate</span>
+</div>
+<h2>Cree su cuenta</h2>
+<span style="color: red"><?=$this->mensaje?></span>
+	<fieldset>
+		<h3>Datos personales</h3>
+                <?php echo $this->form; ?>
+                <br>
+	</fieldset>
+</div>
+

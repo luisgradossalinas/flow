@@ -1,0 +1,41 @@
+<style type="text/css">
+label { width: 10em; float: left; }
+label.error { float: none; color: red; padding-left: .5em; vertical-align: top; }
+.submit { margin-left: 12em; }
+</style>
+<div class="breadcrumb">
+    <a href="<?php echo SITE_URL ?>" title="volver a Inicio">Inicio</a><span class="navigation-pipe">&gt;</span><span class="navigation_page">Contacto</span>
+</div>
+<h2>Contactar con nosotros</h2>
+	<p class="bold">Para preguntas relacionadas con un pedido o para informarse sobre nuestros productos.</p>
+	<form id="contact-form" class="cmxform" method="post" >
+            <?php if ($this->envia){ ?>
+            <span style="color:Red"><br /><?php echo $this->mensaje ?></span>
+            <?php }?>
+		<fieldset>
+			<h3>Enviar un mensaje</h3>
+			<p class="text">
+				<label for="cnombres">Nombres:</label>
+				<input  type="text" id="cnombres" name="nombres" placeholder="Ingrese nombres"  />
+			</p>
+                        <p class="text">
+				<label for="ccel">Celular:</label>
+                                <input  type="text" id="cel" name="cel" placeholder="Ingrese celular" />
+			</p>
+			<p class="text">
+				<label for="cemail">Correo electr&oacute;nico:</label>
+                                <input class="required email" type="text" id="cemail" name="email" size="25" placeholder="Ingrese correo" />
+			</p>
+			<p class="textarea">
+				<label for="cmessage">Mensaje:</label>
+                                <textarea id="message" name="message" rows="7"  cols="35" placeholder="Ingrese mensaje" ></textarea>
+			</p>
+			<p class="submit">
+				<input type="submit"  value="Enviar" id="submit" class="button" />
+			</p>
+		</fieldset>
+	</form>
+
+<br /><br />
+
+

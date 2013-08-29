@@ -1,0 +1,78 @@
+
+/**
+ * jQuery lightBox plugin
+ * This jQuery plugin was inspired and based on Lightbox 2 by Lokesh Dhakar (http://www.huddletogether.com/projects/lightbox2/)
+ * and adapted to me for use like a plugin from jQuery.
+ * @name jquery-lightbox-0.5.css
+ * @author Leandro Vieira Pinho - http://leandrovieira.com
+ * @version 0.5
+ * @date April 11, 2008
+ * @category jQuery plugin
+ * @copyright (c) 2008 Leandro Vieira Pinho (leandrovieira.com)
+ * @license CC Attribution-No Derivative Works 2.5 Brazil - http://creativecommons.org/licenses/by-nd/2.5/br/deed.en_US
+ * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more informations about this jQuery plugin
+ */
+#jquery-overlay { position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; }
+
+#jquery-lightbox { position: absolute; top: 0; left: 0; width: 100%; z-index: 100; text-align: center; line-height: 0; }
+
+#jquery-lightbox span.mov { display:none; }
+
+#jquery-lightbox a img { border: none; }
+
+#lightbox-container-image-box { position: relative; background-color: #fff; width: 250px; height: 250px; margin: 0 auto; }
+
+#lightbox-container-image { padding: 10px; }
+
+#lightbox-loading { position: absolute; top: 40%; left: 0%; height: 25%; width: 100%; text-align: center; line-height: 0; }
+
+#lightbox-nav { position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
+
+#lightbox-container-image-box > #lightbox-nav { left: 0; }
+
+#lightbox-nav a { outline: none; }
+
+#lightbox-nav-btnPrev,
+#lightbox-nav-btnNext { width: 49%; height: 100%; zoom: 1; display: block; }
+
+#lightbox-nav-btnPrev { left: 0; float: left; }
+
+#lightbox-nav-btnNext { right: 0; float: right; }
+
+#lightbox-container-image-data-box-parent { height:30px;} 
+#lightbox-container-image-data-box { font: 10px Verdana, Helvetica, sans-serif; margin: 0 auto; line-height: 1.4em; overflow: hidden;  /*padding: 0 10px 0;*/ }
+
+#lightbox-container-image-data { padding: 0 10px; _padding-right: 0px; color: #666; }
+
+#lightbox-container-image-data #lightbox-image-details { width: 70%; float: left; text-align: left; }
+
+#lightbox-image-details-caption { font-weight: bold; color:#FFF; }
+
+#lightbox-image-details-currentNumber { display: block; clear: left; padding-bottom: 1.0em; color:#FFF; font-size:1.4em;}
+
+#lightbox-secNav-btnClose { width: 65px; float: right; padding-bottom: 0; }
+#jquery-lightbox.panoramic {}
+#jquery-lightbox.panoramic #lightbox-container-image-box { overflow:hidden; padding:0; position:relative; -moz-box-shadow:1px 1px 14px #000; -webkit-box-shadow:1px 1px 14px #000; }
+
+#jquery-lightbox.panoramic #lightbox-container-image #lightbox-image { position:absolute; left:0; top:0; }
+
+#jquery-lightbox.panoramic #lightbox-container-image-data-box { padding:0; position:relative; -moz-box-shadow:0px 4px 11px #000; -webkit-box-shadow:0px 4px 11px #000; }
+
+#jquery-lightbox.panoramic #lightbox-container-image-data-box #lightbox-container-image-data { padding:10px; }
+
+#jquery-lightbox.panoramic span.mov { display:block; background:url(images/arrows.gif) no-repeat; height:44px; width:44px; position:absolute; z-index:15; cursor:pointer; opacity:0.6; filter: alpha(opacity=60); text-indent:-900em; }
+
+#jquery-lightbox.panoramic span.mov:hover,
+#jquery-lightbox.panoramic span.over { opacity:1; filter: alpha(opacity=100); }
+
+#jquery-lightbox.panoramic span.movtop { background-position:left top; left:50%; top:10px; margin-left:-22px; }
+
+#jquery-lightbox.panoramic span.movright { background-position:right top; right:10px; top:50%; margin-top:-22px; }
+
+#jquery-lightbox.panoramic span.movbottom { background-position:bottom right; bottom:10px; left:50%; margin-left:-22px; }
+
+#jquery-lightbox.panoramic span.movleft { background-position:bottom left; top:50%; left:10px; margin-top:-22px; }
+
+#jquery-lightbox.panoramic #lightbox-nav #lightbox-nav-btnPrev,
+#jquery-lightbox.panoramic #lightbox-nav #lightbox-nav-btnNext { display:none !important; }
+.class_panoramica{margin-top: -10px; margin-right: 0px !important; margin-right: -10px;}

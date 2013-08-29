@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Florería Don Lucho</title>
+	<meta name="description" content="Flores, arreglos florales, rosas, cumpleaños, detalles, jardin">
+	<meta name="keywords" content="flores, rosas">
+	<meta name="robots" content="index,follow">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="<?php echo SITE_URL."/img/favicon.ico";?>"  />
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo SITE_URL."/img/favicon.ico";?>" />
+	<link href="<?php echo SITE_URL."/css/global.css"; ?>" rel="stylesheet" >
+	<script src="<?php echo SITE_URL."/js/plugins/ga.js"; ?>"></script>
+        <script type="text/javascript" src="<?php echo SITE_URL."/js/plugins/tools.js"; ?>"></script>
+	<script type="text/javascript">
+		var baseDir = 'http://livedemo00.template-help.com/prestashop_33137/';
+		var static_token = '222fd4897b5e5f038295d390faf62611';
+		var token = '8deb17699c48962a96f2aa737aa5d003';
+	</script>        
+        <script type="text/javascript" src="<?php echo SITE_URL."/js/plugins/jquery-1.4.3.min.js"; ?>" ></script>
+	<script type="text/javascript" src="<?php echo SITE_URL."/js/plugins/jquery-1.2.6.pack.js"; ?>" ></script>
+	<script type="text/javascript" src="<?php echo SITE_URL."/js/plugins/jquery.easing.1.3.js"; ?>"></script>
+	<script type="text/javascript" src="<?php echo SITE_URL."/js/plugins/jquery.hotkeys-0.7.8-packed.js"; ?>" ></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL."/js/plugins/jquery.autocomplete.css"; ?>" >
+        <script type="text/javascript" src="<?php echo SITE_URL."/js/plugins/jquery.autocomplete.js";?>"></script>
+        <script type="text/javascript" src="<?php echo  SITE_URL."/jquery/js/jquery.numeric.js?".V_JS_CSS; ?>"></script>
+        <script type="text/javascript" src="<?php echo SITE_URL."/js/web/inicio.js";?>"></script>
+        <script type="text/javascript" src="<?php echo SITE_URL."/js/plugins/jquery.thickBox.js";?>"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo SITE_URL."/css/tichkbox.css"; ?>">
+        <link rel="stylesheet" type="text/css" href="<?php echo SITE_URL."/css/login_web.css"; ?>">
+        <?php echo $this->headLink() . "\n" ?>
+        <?php echo $this->headScript() . "\n" ?>
+</head>
+<body id="category">
+<div id="wrapper1">
+<div id="wrapper2">
+	<div id="header">
+	<h1 id="logo"><a href="" title="Florería Don Lucho"><img src="<?php echo SITE_URL."/img/logo.png";?>" alt="Flower"></a></h1>
+	<div id="header_right">
+<div id="header_user" >
+	<ul>
+		<li id="shopping_cart">
+                        <a href="http://www.facebook.com/FloreriaDonLucho?ref=hl">
+			<img src="<?=SITE_URL."/images/icons/facebook.png"?>" width="11%" alt="Facebook Florería Don Lucho" >
+                        </a>
+                        <a href="#" title="Su carrito de la compra">Carrito:</a>
+			<div>
+				<span class="ajax_cart_quantity hidden">0</span>
+				<span class="ajax_cart_product_txt hidden">producto</span>
+				<span class="ajax_cart_product_txt_s hidden">productos</span>
+				<span class="ajax_cart_no_product">vacío</span>
+			</div>
+		</li>
+		<li id="header_user_info">
+                    <?php $auth = Zend_Auth::getInstance()->hasIdentity();
+                    if ($auth)
+                        echo 'Mi cuenta';
+                    else { ?> 
+                    <?=$this->partial('_partials/_login_web.phtml');?>
+                    <?php } ?>
+		</li>
+	</ul>
+</div>
+<?php $active = 'active'; ?>
+<ul id="header_links" >
+	<li id="header_link_home">
+            <a href="<?php echo SITE_URL; ?>" title="inicio">inicio</a>
+	</li>
+	<li id="header_link_specials">
+		<a href="#" title="especiales">especiales</a>
+	</li>
+	<li id="header_link_sitemap">
+		<a class="<?=$this->layout()->active == 'registro'?$active:''?>" href="<?php echo SITE_URL."/registro"; ?>" title="Regístrate">Regístrate</a>
+	</li>
+	<li id="header_link_contact">
+		<a class="<?=$this->layout()->active == 'contacto'?$active:''?>" href="<?php echo SITE_URL."/contacto"; ?>" title="contacto">contacto</a>
+	</li>
+</ul>
+<div id="search_block_top">
+	<label for="search_query">Buscar producto: </label>
+	<form method="post" action="/producto/buscar" onsubmit="return validaBusqueda();" id="searchbox">
+            <input type="text" id="search_query" name="search" autocomplete="off"  class="ac_input">
+		<a  style="cursor: pointer" onclick="validaBusqueda();">Ir</a>
+	</form>
+</div>
+</div>
+		</div>
+<br />
+<div id="columns">
+<div id="left_column" class="column">
+<script type="text/javascript" src="<?php echo SITE_URL."/js/plugins/treeManagement.js";?>"></script>
+<div id="categories_block_left" class="block">
+	<h4>Categorías</h4>
+	<div class="block_content">
+		<ul class="tree dynamized" style="display: block; " id="lstCategoria">
+                    <?php
+                    if ($this->layout()->categoria != null) {
+                        foreach ($this->layout()->categoria as $reg)
+                            echo "<li><a href=/categoria/".$reg['id'].">".$reg["nom_cat"]."</a></li>";
+                    }
+                    ?>
+                </ul>
+	</div>
+</div>
+<script type="text/javascript">
+	$('div#categories_block_left ul.dhtml').hide();
+</script>
+<script type="text/javascript" src="<?php echo SITE_URL."/js/plugins/iutil.prestashop-modifications.js";?>"></script>
+<script type="text/javascript" src="<?php echo SITE_URL."/js/plugins/ifxtransfer.js"; ?>"></script>
+<script type="text/javascript">
+var CUSTOMIZE_TEXTFIELD = 1;
+var customizationIdMessage = 'Personalización n°';
+var removingLinkText = 'eliminar este producto de mi carrito';
+</script>
+<script type="text/javascript" src="<?php echo SITE_URL."/js/plugins/ajax-cart.js"; ?>"></script>
+<div id="cart_block" class="block exclusive">
+	<h4>
+		<a href="">Carrito</a>
+		<span id="block_cart_expand" class="hidden">&nbsp;</span>
+		<span id="block_cart_collapse">&nbsp;</span>
+	</h4>
+	
+        <div class="block_content">
+	<div id="cart_block_summary" class="collapsed">
+		<span class="ajax_cart_product_txt_s hidden">productos</span>
+		<span class="ajax_cart_product_txt hidden">producto</span>
+		<span class="ajax_cart_no_product">(vacío)</span>	
+        </div>
+                <div id="cart_block_list" class="expanded">
+			<p id="cart_block_no_products">Sin producto</p>
+		<div class="cart-prices">
+		<div class="cart-prices-block">
+			<span>Total</span>
+			<span id="cart_block_total" class="price ajax_block_cart_total">s/ 0.00</span>
+		</div>
+		</div>
+		<p id="cart-buttons">
+			<a href="<?=SITE_URL."/carrito"?>" class="exclusive" title="Carrito">Carrito</a>
+			<a href="" id="button_order_cart" class="button" title="Confirmar">Confirmar</a>
+		</p>
+	</div>
+	</div>
+</div>
+<iframe src="http://www.facebook.com/plugins/recommendations.php?site=http%3A%2F%2Fwww.floreriadonlucho.com&amp;width=150&amp;height=300&amp;header=true&amp;colorscheme=light" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:300px;" allowTransparency="true"></iframe>
+</div>
+<div id="center_column" class="center_column">
+    <div id="featured-products_block_center" class="block products_block">
+	<div class="block_content">
+			<?php echo $this->layout()->content ?>
+        </div>
+    </div>
+    <br />
+    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.floreriadonlucho.com&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+</div>
+</div>
+<br class="clear">
+</div>
+</div>
+<?php echo $this->render("footer.phtml"); ?>
+</html>

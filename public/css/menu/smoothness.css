@@ -1,0 +1,139 @@
+body
+{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+.estilo_menu_usuario
+{
+color:black    
+}
+
+.qmmc .qmdivider{display:block;font-size:1px;border-width:0px;border-style:solid;position:relative;z-index:1;}
+.qmmc .qmdividery{float:left;width:0px;}
+.qmmc .qmtitle{display:block;cursor:default;white-space:nowrap;position:relative;z-index:1;}
+.qmclear {font-size:1px;height:0px;width:0px;clear:left;line-height:0px;display:block;float:none !important;}
+.qmmc {position:relative;zoom:1;z-index:10;}
+.qmmc a, .qmmc li {float:left;display:block;white-space:nowrap;position:relative;z-index:1;}
+.qmmc div a, .qmmc ul a, .qmmc ul li {float:none;}
+.qmsh div a {float:left;}.
+qmmc div{visibility:hidden;position:absolute;}
+.qmmc .qmcbox{cursor:default;display:inline-block;position:relative;z-index:1;}
+.qmmc .qmcbox a{display:inline;}
+.qmmc .qmcbox div{float:none;position:static;visibility:inherit;left:auto;}
+.qmmc li {z-index:auto;}
+.qmmc ul {left:-10000px;position:absolute;z-index:10;}
+.qmmc, .qmmc ul {list-style:none;padding:0px;margin:0px;}
+.qmmc li a {float:none;}
+.qmmc li:hover>ul{left:auto;}
+#qm0 ul {top:100%;}
+#qm0 ul li:hover>ul{top:0px;left:100%;}
+
+#qm0	
+{	
+width:auto;
+background-color:#E4E4E4;
+border-width:4px 0px 4px 0px;
+border-style:solid;
+border-color:#494949;
+}
+
+#qm0 a	
+{	
+padding:5px 40px 5px 8px;
+color:#000000;
+font-family:Arial;
+font-size:12px;
+text-decoration:none;
+text-align:left;
+}
+
+#qm0 a:hover	
+{	
+text-decoration:underline;
+}
+	
+#qm0 li:hover>a	
+{	
+text-decoration:underline;
+}
+	
+body #qm0 .qmactive, body #qm0 .qmactive:hover	
+{	
+text-decoration:underline;
+}
+	
+#qm0 div, #qm0 ul	
+{	
+padding:8px;
+margin:0px 0px 0px 0px;
+background-color:transparent;
+border-width:0px;
+border-style:none;
+border-color:transparent;
+}
+
+#qm0 div a, #qm0 ul a	
+{	
+padding:2px 40px 2px 5px;
+background-color:transparent;
+color:#E4E4E4;
+font-size:11px;
+border-width:0px;
+border-style:none;
+}
+
+#qm0 div a:hover	
+{	
+text-decoration:underline;
+}
+	
+#qm0 ul li:hover>a	
+{	
+text-decoration:underline;
+}
+
+body #qm0 div .qmactive, body #qm0 div .qmactive:hover	
+{	
+background-color:#E4E4E4;
+color:#333333;
+text-decoration:none;
+}
+
+#qm0 .qmtitle	
+{	
+margin:2px 5px 4px 5px;
+color:#111111;
+font-family:Arial;
+font-size:11px;
+font-weight:bold;
+}
+
+#qm0 .qmdividerx	
+{	
+border-top-width:1px;
+margin:5px 4px 5px 4px;
+border-color:#A9A9A9;
+}
+
+div#qm0 div div	
+{	
+margin:0px;
+}
+	
+ul#qm0 ul ul	
+{	
+margin:0px;
+}
+
+ul#qm0 ul	
+{	
+margin:0px;
+background-color:#757575;
+border-width:1px;
+border-style:solid;
+border-color:#333333;
+}
+

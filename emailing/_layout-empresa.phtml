@@ -1,0 +1,69 @@
+<html>
+<head>
+<!--general stylesheet-->
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+p {
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, p, li {
+	font-family: Arial, Helvetica, sans-serif;
+}
+td {
+	vertical-align:top;
+}
+ul, ol {
+	margin: 0;
+	padding: 0;
+}
+</style>
+</head>
+<body>
+<table cellspacing="0" border="0" cellpadding="0" width="100%">
+    <tr valign="top">
+        <td>
+            <!-- heaer -->
+            <table cellspacing="0" cellpadding="0" border="0" align="center" width="750" bgcolor="#ffffff">
+                 <tr>
+                    <td valign="middle" bgcolor="#ffffff" height="30" style="vertical-align: middle; border-bottom: #d6d6d6 0px solid">
+                        <p style="font-size: 12px;"> Para asegurar la entrega de nuestros e-mail en su correo, por favor agregue <a  style="COLOR: #0972D3;text-decoration:none;" href="mailto:notificaciones@aptitus.com.pe" >notificaciones@aptitus.pe</a> a su libreta de contactos</p>
+                    </td>
+                 </tr>
+            </table>                
+            <table cellspacing="0" cellpadding="0" border="0" align="center" width="750" bgcolor="#ffffff">
+                <tr>
+                    <td  bgcolor="#DFE0E2" style="margin: 0px 0px 0px; padding:8px 0 5px  16px; color:#ffffff"><img src="<?=MEDIA_URL?>/images/emailing/aptitus_logo_empresa.jpg" alt="Aptitus"/></td>
+                </tr>
+            </table>
+            <!--container-->
+            <table cellspacing="0" cellpadding="0" border="0" align="center" width="750" bgcolor="#ffffff">
+                <tr>                    
+                    <td valign="top" align="center" bgcolor="#F1F3F3">
+                        <!--content-->
+                        <?=$this->emailTemplate?>
+                    </td>
+                </tr>
+	        </table>
+            <!--/container-->
+            <!--/pie de pagina-->
+            <table align="center" width="750" cellspacing="0" border="0" cellpadding="0">
+                <tr>
+                    <td style="background-repeat: no-repeat" bgcolor="#DFE0E2" align="center" >
+                        <table style="padding-bottom:8px"align="right" width="750"  cellspacing="0" border="0" cellpadding="0">
+                            <tr>
+                                <td width="125" align="left" valign="middle" style="padding-right: 10px; padding-left: 20px; padding-top: 8px"><img src="<?=MEDIA_URL?>/images/emailing/logoEco.png"></td>
+                                <td width="250">&nbsp;</td>
+                                <td width="250" align="right" valign="middle" style="padding-left: 10px; padding-top: 10px; padding-right:13px; text-align:right"><span style="font-size: 14px; font-family: Arial, Helvetica, sans-serif"><span style="font-weight:bold;">e-mail: </span><a  style="color:#ffffff;text-decoration:none;" href="mailto:info@aptitus.com.pe" >info@aptitus.com.pe</a></span></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>            
+        </td>
+    </tr>
+</table>
+</body>
+</html>

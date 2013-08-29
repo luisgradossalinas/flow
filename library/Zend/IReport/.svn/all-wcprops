@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/LCB-SGA/!svn/ver/1146/trunk/library/Add/IReport
+END
+JRU.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/LCB-SGA/!svn/ver/1146/trunk/library/Add/IReport/JRU.php
+END
+JdbcConn.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/LCB-SGA/!svn/ver/1113/trunk/library/Add/IReport/JdbcConn.php
+END
+JdbcConnection.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/LCB-SGA/!svn/ver/673/trunk/library/Add/IReport/JdbcConnection.php
+END

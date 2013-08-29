@@ -1,0 +1,16 @@
+<?php echo $this->headScript() . "\n" ?>
+<div align="left">
+    <input type="button" value="Nuevo" id="btn-create-categoria" />
+    <input type="button" value="Modificar" id="btn-update-categoria" />
+    <!--<input type="button"  value="Eliminar" id="btn-delete-op"   />-->
+</div>
+<div id="grilla_categoria" style="width:auto;height: auto;">
+    <table id="categoria-grid" ></table>
+    <div id="categoria-grid-page" ></div>
+</div>
+<div id="dialog-confirm-categoria" title="Eliminar registro" style="display:none">
+    <p>
+        <span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+        ¿Seguro que desea eliminar el registro?</br>
+    </p>
+</div>

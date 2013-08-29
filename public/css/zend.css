@@ -1,0 +1,32 @@
+.zend_form input[type=text], 
+.zend_form input[type=password]
+{ width:300px; }
+.zend_form textarea{ width: 300px; height:100px; }
+.zend_form .line{ margin:10px 0; display: block; clear: both;}
+.zend_form .line dt, .zend_form .line dd{ display:inline-block; vertical-align:middle; }
+.zend_form .line dt, .zend_form .line dd{ float:left; }
+.zend_form .line dt{ width:200px; }
+.zend_form ul.error{ display:inline; margin:0; padding:0; list-style:none }
+.zend_form ul.error li{ margin:0; padding:0 }
+.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {
+white-space: normal;
+}
+.ui-jqgrid .ui-jqgrid-htable th div {
+height: auto;
+}
+.ui-widget .ui-widget {
+font-size: 10px;
+}
+.ui-jqgrid .ui-jqgrid-titlebar {
+height: 16px;
+}
+.ui-jqgrid tr.jqgrow td {
+white-space: normal;
+}
+tr.ui-search-toolbar input {
+height: 18px;
+}
+.active {
+font-weight:bolder;
+font-style:italic;
+}

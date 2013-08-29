@@ -1,0 +1,447 @@
+/*
+    Document   : print
+    Created on : 25/06/2009, 02:56:33 PM
+    Author     : atacuri
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+*, body
+{
+	margin:0;
+	padding:0;
+}
+body
+{
+	font:normal 12px Arial, Helvetica, sans-serif;
+	color:#494949;
+}
+h2
+{
+	color:#006699;
+	font: bold 13px Arial, "Trebuchet MS", Georgia;
+	padding:5px 10px;
+}
+h3
+{
+	color:#666;
+	padding:5px 0 10px 0;
+	font:bold 14px Arial, Helvetica, sans-serif;
+}
+/* Estilos de Formularios */
+form
+{
+	padding:0px;
+}
+form ul li {
+	margin:0 0 10px 175px;
+    color:#CC0000;
+	}
+fieldset
+{
+	border:1px solid #CCC;
+	color:#999;
+	margin-bottom:5px;
+	padding:10px 0 10px 0px;
+}
+legend
+{
+	margin:0;
+	padding:3px 3px 3px 3px;
+	color:#27A9D7;
+	font:bold 15px Arial, Helvetica, sans-serif;
+	letter-spacing:0.05em;
+}
+
+label
+{
+ 	height:20px;
+	text-align:right;
+	margin-right:5px;
+	color:#048FC2;
+}
+
+
+ div.fields label
+{
+    display:block;
+    float:left;
+    width:160px;
+    text-align:right;
+    margin-right:5px;
+    line-height:18px;
+}
+
+div.fields
+{
+    display:block;
+	width:99%;
+	overflow: hidden;
+
+}
+input, select, textarea
+{
+	margin-bottom:5px;
+    margin-right:10px;
+	border:1px solid #B9D7E6;
+	border-top-color:#D5E8F0;
+	border-left-color:#D5E8F0;
+	padding:2px;
+	color:#666;
+	font:normal 12px Arial, Helvetica, sans-serif;
+	background:#FFF;
+}
+input:hover,
+select:hover,
+textarea:hover
+{
+	background:#EBFAFE;
+	border:1px solid #B9D7E6;
+}
+input:focus,
+select:focus,
+textarea:hover
+{
+	border:1px solid #B9D7E6;
+}
+select
+{
+	padding:2px 0px 2px 0;
+	border-width:1px;
+	border-style:solid;
+	border-color: #D5E8F0 #B9D7E6 #B9D7E6 #D5E8F0;
+}
+button
+{
+    display:none;
+    visibility:hidden;
+	font:normal 12px Arial, Helvetica, sans-serif;
+}
+#ykWrapper
+{
+    display:block;
+	width:100%;
+}
+#ykHead
+{
+	display:none;
+	visibility:hidden;
+	width:100%;
+	background:#048FC2;
+    border-bottom:1px solid #CCC;
+}
+	#ykHead #ykLogo
+	{
+		display:block;
+		float:none;
+		margin-left:0px !important;
+		margin-top:0px;
+        color:#999;
+	}
+        #ykLogo h1 a
+        {
+            background-color:transparent;
+            display:block;
+            margin:0;
+            padding:0px 0 0 0px;
+            width:auto;
+            font:bold 14px Arial, Helvetica, sans-serif;
+            color:#999;
+            text-decoration:none;
+        }
+        #ykLogo h1 a:hover
+        {
+            text-decoration:underline;
+        }
+	#ykHead #ykAccess
+	{
+		display:none;
+        visibility:hidden;
+		float:none;
+	}
+
+	#ykHead #ykLogoYarkan
+	{
+        display:none;
+        visibility:hidden;
+		float:none;
+		margin:5px 10px 6px 10px;
+	}
+#ykMenu
+{
+	display:none;
+    visibility:hidden;
+	width:auto;
+	height:31px;
+	border-bottom:1px solid #F0f0f0;
+	background:#048FC2;
+	color:#FFFFFF;
+	padding-left:20px;
+}
+#ykContainer
+{
+	height:100% !important;
+	display:block;
+	clear:both;
+}
+#ykContentWrapper
+{
+    padding:0px 0 0 0px;
+    width:100%;
+}
+#ykSidebar
+{
+    display:none;
+    visibility:hidden;
+    float:none;
+}
+#ykContent .guideSys
+{
+    display:none;
+    visibility:hidden;
+    float:none;
+}
+#ykContent .searchRight
+{
+    display:none;
+    visibility:hidden;
+    float:none;
+}
+#ykContent #ykContentBody
+{
+    padding:10px 0px 5px 0px;
+    width: 750px;
+    display: block;
+}
+#ykContent #ykContentBody h1
+{
+    color:#999;
+	margin-bottom:15px;
+}
+#ykFoot
+{
+    display:none;
+}
+#ykButtons {
+    display:none;
+    visibility: hidden;
+}
+.h1Title
+{
+	background: none;
+	padding:10px 10px 10px 0px;
+	border-bottom:0px solid #E0E0E0;
+	border-left:0px solid #E0E0E0;
+	color:#555;
+	font:bold 20px Arial, Helvetica, sans-serif;
+	letter-spacing:0px;
+}
+
+/* tabla General*/
+table.tableGral
+{
+	display:table;
+	padding:0px;
+	margin:0 0 10px 0;
+	border:none;
+	width:100%!important;
+	width:99%;
+        font-size: 10px;
+}
+	table.tableGral th
+	{
+		color:#333;
+		border-bottom:2px solid #999;
+		padding:7px 0px 7px 0px;
+		text-align:left;
+		font-weight:bold;
+                letter-spacing: 0px;
+                font-family: Arial;
+	}
+	table.tableGral thead tr:hover
+	{
+		background:#F0F9FC;
+	}
+	table.tableGral th a
+	{
+		color:#333;
+		text-decoration:none;
+		font-weight:bold;
+	}
+	table.tableGral th.tableGralTh
+	{
+		color:#333333;
+		background:#D9EBF9;
+	}
+	table.tableGral th.tableGralTh a
+	{
+		font-weight:bold;
+	}
+	table.tableGral thead td
+	{
+		border:1px solid #F1F1F1;
+		border-bottom:1px solid #E9E9E9;
+		background:none;
+	}
+	table.tableGral td{
+		padding: 2px;
+		border-bottom:1px solid #E9E9E9;
+                letter-spacing: 0px;
+                font-family: Arial;
+                white-space: normal;
+		}
+	table.tableGral td a
+		{
+			color:#333;
+			text-decoration:none;
+		}
+	table.tableGral tr.rowsHover, table.tableGral tr:hover
+	{
+		background:#E8F1FF;
+	}
+    table.tableGral th img, table.tableGral td img
+    {
+        display:none;
+        visibility:hidden;
+    }
+/***/
+.barEstProm
+{
+	height:5px;
+	height:21px!important;
+	float:left;
+	border:0;
+    margin:0;
+}
+.barEstProm img {margin-top:0;}
+
+.barEstPorc
+{
+	background-color:#000000;
+	height:5px;
+	z-index:+2;
+	float:left;
+	display:block;
+	margin-top:7px;
+	border:0;
+}
+
+table.tableGral5
+{
+	display:table;
+	padding:0px;
+	margin:0;
+	border:none;
+	width:100%!important;
+	width:99%;
+	vertical-align:middle;
+}
+table.tableGral5 th
+{
+	color:#333;
+	border-bottom:1px solid #000000;
+	background:#FFFFFF;
+	padding:7px 5px 7px 5px;
+	text-align:left;
+	font-weight:normal;
+}
+table.tableGral5 thead tr:hover
+{
+	background:#F0F9FC;
+}
+table.tableGral5 th a
+{
+	color:#000;
+	text-decoration:none;
+	font-weight:normal;
+}
+table.tableGral5 th.tableGral5Th
+{
+	color:#333333;
+	background:#D9EBF9;
+}
+table.tableGral5 th.tableGral5Th a
+{
+	font-weight:bold;
+}
+table.tableGral5 thead td
+{
+	border:1px solid #F1F1F1;
+	border-bottom:1px solid #DBDBDB;
+	background:#FFF url(graphics/bg_gralTableThTd.jpg) left bottom repeat-x;
+}
+
+table.tableGral5 td
+{
+	border-right:0px solid #DBDBDB;
+    margin:0;
+    padding:0;
+}
+ .gris {
+     text-align:left;
+     border-left:1px solid #000000;
+     background:#FFFFFF;
+
+}
+table.tableGral5 tr:hover td.gris {
+	background:#E8F1FF;
+}
+table.tableGral5 td a
+{
+	color:#0283CF;
+	text-decoration:none;
+}
+table.tableGral5 tr.rowsHover, table.tableGral5 tr:hover
+{
+	background:#E8F1FF;
+}
+table.tableGral3
+{
+	display:none;
+	padding:3px;
+	margin:0 0 1px 0;
+	border:1px solid #000000;
+	width:400px!important;
+	width:400px;
+}
+table.tableGral3 th
+{
+	display:none;
+}
+table.tableGral3 td
+{
+	width: 30%;
+}
+.barra
+{
+	padding-bottom:0px;
+	z-index:+1;
+}
+
+ul.leyenda {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+}
+
+ul.leyenda li {
+	font-family:verdana;
+	font-size:9px;
+	line-height:15px;
+	list-style-image:none;
+	list-style-type:none;
+}
+
+#real {
+	float:left;
+	width:2px;
+	height:16px;
+	margin-top:1px;
+	margin-right:2px
+}
