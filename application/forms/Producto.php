@@ -86,10 +86,14 @@ class Application_Form_Producto extends Zend_Form
 
     public function populate($data)
     {
-        $data['fecha_crea'] = new Zend_Date($data['fecha_crea'],'yyyy-mm-dd');
+        /*$data['fecha_crea'] = new Zend_Date($data['fecha_crea'],'yyyy-mm-dd');
         $data['fecha_crea'] = $data['fecha_crea']->get('dd/mm/yyyy');
         $data['fecha_actu'] = new Zend_Date($data['fecha_actu'],'yyyy-mm-dd');
         $data['fecha_actu'] = $data['fecha_actu']->get('dd/mm/yyyy');
+         * */
+        $fechaMostrar = new App_View_Helper_FechaMostrar;
+        $data['fecha_crea'] = $fechaMostrar->FechaMostrar($data['fecha_crea']);
+        $data['fecha_actu'] = $fechaMostrar->FechaMostrar($data['fecha_actu']);
         return $this->setDefaults($data);
     }
 
