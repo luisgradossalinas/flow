@@ -10,7 +10,7 @@ class Default_CategoriaController extends Zend_Controller_Action
     public function init()
     {
        $this->_categoriaModelo = new Application_Model_Categoria;
-       Zend_Layout::getMvcInstance()->assign(array("categoria" => $this->_categoriaModelo->listado()));
+       Zend_Layout::getMvcInstance()->assign(array("categoria" => $this->_categoriaModelo->listadoWeb()));
     }
 
     public function indexAction()

@@ -60,13 +60,6 @@ class Application_Form_Rol extends Zend_Form
         $this->addElement($fecha_actu);
     }
 
-    public function populate($data)
-    {
-        $data['fecha_crea'] = new Zend_Date($data['fecha_crea'],'yyyy-mm-dd');
-        $data['fecha_crea'] = $data['fecha_crea']->get('dd/mm/yyyy');
-        return $this->setDefaults($data);
-    }
-
 
 }
 

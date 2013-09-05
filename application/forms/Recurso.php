@@ -108,15 +108,5 @@ class Application_Form_Recurso extends Zend_Form
         $this->addElement($fecha_actu);
     }
 
-    public function populate($data)
-    {
-        $data['fecha_crea'] = new Zend_Date($data['fecha_crea'],'yyyy-mm-dd');
-        $data['fecha_crea'] = $data['fecha_crea']->get('dd/mm/yyyy');
-        $data['fecha_actu'] = new Zend_Date($data['fecha_actu'],'yyyy-mm-dd');
-        $data['fecha_actu'] = $data['fecha_actu']->get('dd/mm/yyyy');
-        return $this->setDefaults($data);
-    }
-
-
 }
 

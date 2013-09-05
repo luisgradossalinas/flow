@@ -15,7 +15,7 @@ class Default_IndexController extends Zend_Controller_Action
        $this->_carritoModelo = new Application_Model_Carrito;
        $this->_usuarioModelo = new Application_Model_Usuario;
        $this->_contactoModelo = new Application_Model_Contacto;
-       Zend_Layout::getMvcInstance()->assign(array("categoria" => $this->_categoriaModelo->listado()));
+       Zend_Layout::getMvcInstance()->assign(array("categoria" => $this->_categoriaModelo->listadoWeb()));
        // $this->view->headLink()->appendStylesheet(SITE_URL. '/css/grddid.css');
     }
 

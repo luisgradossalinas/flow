@@ -54,13 +54,6 @@ class Application_Form_Contacto extends Zend_Form
         $this->addElement($respondido);
     }
 
-    public function populate($data)
-    {
-        $data['fecha_envio'] = new Zend_Date($data['fecha_envio'],'yyyy-mm-dd');
-        $data['fecha_envio'] = $data['fecha_envio']->get('dd/mm/yyyy');
-        return $this->setDefaults($data);
-    }
-
 
 }
 

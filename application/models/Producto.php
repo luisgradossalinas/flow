@@ -26,17 +26,9 @@ class Application_Model_Producto extends Zend_Db_Table
         $datos = array_intersect_key($datos, array_flip($this->_getCols()));
         
         if ($id > 0) {
-        	$datos['fecha_crea'] = new Zend_Date($datos['fecha_crea'],'yyyy-mm-dd');
-        	$datos['fecha_crea'] = $datos['fecha_crea']->get('yyyy-mm-dd');
-        	$datos['fecha_actu'] = new Zend_Date($datos['fecha_actu'],'yyyy-mm-dd');
-        	$datos['fecha_actu'] = $datos['fecha_actu']->get('yyyy-mm-dd');
         	$cantidad = $this->update($datos, 'id = ' . $id);
         	$id = ($cantidad < 1) ? 0 : $id;
         } else {
-        	$datos['fecha_crea'] = new Zend_Date($datos['fecha_crea'],'yyyy-mm-dd');
-        	$datos['fecha_crea'] = $datos['fecha_crea']->get('yyyy-mm-dd');
-        	$datos['fecha_actu'] = new Zend_Date($datos['fecha_actu'],'yyyy-mm-dd');
-        	$datos['fecha_actu'] = $datos['fecha_actu']->get('yyyy-mm-dd');
         	$id = $this->insert($datos);
         }
         
@@ -45,7 +37,10 @@ class Application_Model_Producto extends Zend_Db_Table
 
     public function listado()
     {
-        return $this->getAdapter()->select()->from($this->_name)->query()->fetchAll();
+        $sql = $this->getAdapter();
+        return $sql->select()->from(array('p' => $this->_name))
+                ->joinInner(array('c' => 'categoria'), 'c.id = p.id_categoria','nom_cat')
+                ->query()->fetchAll();
     }
     
     public function searchByCategoria($cat) 

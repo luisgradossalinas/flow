@@ -6,7 +6,7 @@
 <div class="widget-content nopadding">
     <table id='tabla' class="table table-condensed table-bordered" >
         <thead>
-        <tr><th></th><th>Nom_cat</th><th>Estado</th><th>Usuario_crea</th><th>Fecha_crea</th><th>Usuario_actu</th><th>Fecha_actu</th></tr>
+        <tr><th></th><th>Nombre de la categoría</th><th>Estado</th></tr>
         </thead>
         <?php
         echo '<tbody>';
@@ -22,11 +22,9 @@
         ?>   
         <?php 
 	echo "<td>".$value['nom_cat']."</td>";
-	echo "<td>".$value['estado']."</td>";
-	echo "<td>".$value['usuario_crea']."</td>";
-	echo "<td>".$this->FechaMostrar($value['fecha_crea'])."</td>";
-	echo "<td>".$value['usuario_actu']."</td>";
-	echo "<td>".$this->FechaMostrar($value['fecha_actu'])."</td>";
+        if ($value['estado'] == 0)
+            $estado = 'error.png';
+	echo "<td class=taskOptions><img src='".SITE_URL."/img/".$estado."' width=12></td>";
 	echo "</tr>";
 	?>
         <?php
