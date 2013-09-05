@@ -48,10 +48,10 @@ class Application_Model_Producto extends Zend_Db_Table
         return $this->getAdapter()->select()->from($this->_name)->query()->fetchAll();
     }
     
-    public function searchByCategoria($limit) 
+    public function searchByCategoria($cat) 
     {
         $sql = $this->getAdapter();
-        return $sql->select()->from($this->_name)->limit($limit)->query()->fetchAll();
+        return $sql->select()->from($this->_name)->where('id_categoria = ?',$cat)->query()->fetchAll();
     }
 
 
