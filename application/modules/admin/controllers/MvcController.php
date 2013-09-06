@@ -144,6 +144,11 @@ class Admin_MvcController extends App_Controller_Action_Admin
         }
         
         if ($this->_getParam('ajax') == 'save') {
+            
+            $sessionFoto = new Zend_Session_Namespace("foto");
+            $utilfile =   $this->_helper->getHelper('UtilFiles');
+            $utilfile->_generarImagenes($sessionFoto->nombre);
+            $data['imagen'] = $sessionFoto->nombre;
       
             if ($this->_getParam('scrud') == 'nuevo') {
                 $data['fecha_crea'] = date("Y-m-d H:i:s");
