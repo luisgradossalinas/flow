@@ -63,10 +63,18 @@ class Application_Form_Recurso extends Zend_Form
         $url->addFilter('StripTags');
         $this->addElement($url);
         
-        $funcion_listado = new Zend_Form_Element_Text('funcion_listado');
+        $funcion_listado = new Zend_Form_Element_Select('funcion_listado');
         $funcion_listado->setLabel('Funcion_listado:');
         $funcion_listado->setAttrib('maxlength',100);
         $funcion_listado->addFilter('StripTags');
+        
+        $dataFN = array();
+        
+        array_unshift($dataFN,array('key'=> 'fetchAll', 'value' => 'fetchAll'));
+        array_unshift($dataFN,array('key'=> 'listado', 'value' => 'listado'));
+        array_unshift($dataFN,array('key'=> '', 'value' => 'Seleccione'));
+        
+        $funcion_listado->setMultiOptions($dataFN);
         $this->addElement($funcion_listado);
         
         $tab = new Zend_Form_Element_Text('tab');

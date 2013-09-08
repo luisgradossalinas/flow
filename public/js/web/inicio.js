@@ -50,7 +50,7 @@ $(document).ready(function(){
            
        
        $.ajax({
-           url: urls.siteUrl + '/admin/auth/login-web',
+           url: urls.siteUrl + '/auth/login',
            type: 'post',
            dataType: 'json',
            data:{
@@ -60,7 +60,7 @@ $(document).ready(function(){
            success : function(result)
            {
                if (result.success == 1)
-                    document.location.reload(true);    
+                    //document.location.reload(true);    
                else
                    $('#msjError').empty().html(result.msg);
            }

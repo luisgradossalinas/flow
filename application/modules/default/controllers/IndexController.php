@@ -43,19 +43,22 @@ class Default_IndexController extends Zend_Controller_Action
              if ($form->isValid($data)) {   
                 $this->_contactoModelo->guardar($data);
                 $form->reset();
+                
+                //Envío de correo en hosting cuando se tenga php 5.2.4
+                $this->_helper->mail->contactoWeb(
+                    array(
+                        'to' => $data["correo"],
+                        'pagina_web' => PAGINA_WEB,
+                        'nombres' => $data["nombres"],
+                        'celular' => $data["celular"],
+                        'mensaje' => $data["mensaje"]
+                    )
+                );
+             
                 $this->view->mensaje = "Mensaje enviado correctamente.";
             }
              
-             //Envío de correo en hosting cuando se tenga php 5.2.4
-             $this->_helper->mail->contactoWeb(
-                 array(
-                     'to' => $data["correo"],
-                     'pagina_web' => PAGINA_WEB,
-                     'nombres' => $data["nombres"],
-                     'celular' => $data["celular"],
-                     'mensaje' => $data["mensaje"]
-                 )
-             );
+             
          }
          $this->view->form = $form;
          
@@ -87,9 +90,25 @@ class Default_IndexController extends Zend_Controller_Action
                 try {
                     $db->beginTransaction();
                     $data['id_rol'] = Application_Model_Rol::CLIENTE_WEB;
+                    $data['clave'] = md5($data['clave']);
+                    $data['estado'] = Application_Model_Usuario::ESTADO_ACTIVO;
+                    
+                    $fechaNac = explode('/', $data['fecha_nac']);
+                    $data['fecha_nac'] = $fechaNac[2].'-'.$fechaNac[1].'-'.$fechaNac[0];
+                            
+                    
                     $this->_usuarioModelo->guardar($data);
                     $form->reset();
                     $this->view->mensaje = '<br>Registro grabado con éxito puede loguearse';
+                    $db->commit();
+                    
+                    $this->_helper->mail->nuevoCliente(
+                        array(
+                            'to' => $data["email"],
+                            'cliente' => $data['nombres'].' '.$data['apellidos'],
+                            'celular' => $data["celular"]
+                        )
+                    );
                     
                 } catch (Zend_Db_Exception $e) {
                      $db->rollBack();

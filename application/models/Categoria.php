@@ -51,7 +51,7 @@ class Application_Model_Categoria extends Zend_Db_Table
     {
         return $this->getAdapter()->select()->from($this->_name,
                 array('key' => 'id' ,'value' => 'nom_cat' ))
-                //->where('estado = ?',self::ESTADO_ACTIVO)
+                ->where('estado != ?',self::ESTADO_ELIMINADO)
                 ->order('nom_cat asc')
                 ->query()->fetchAll();
     }

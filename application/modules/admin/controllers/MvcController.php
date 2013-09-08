@@ -20,7 +20,7 @@ class Admin_MvcController extends App_Controller_Action_Admin
         
         $sesionMvc  = new Zend_Session_Namespace('sesion_mvc');
         $this->_recurso = new Application_Model_Recurso;
-        
+
         if ($this->_hasParam('model')) {
 
                 $this->_model = $this->_getParam('model');
@@ -42,7 +42,7 @@ class Admin_MvcController extends App_Controller_Action_Admin
             $this->_redirect(SITE_URL.'/admin/error/error-mvc');
         }
         
-        
+
         $this->_form = new $sesionMvc->form;
         $this->_clase = new $sesionMvc->clase;
         
@@ -72,6 +72,12 @@ class Admin_MvcController extends App_Controller_Action_Admin
             
         }else {
         
+            //Cuando no debe aparecer el boton nuevo
+            /*if ($this->_model != 'contacto') //poner todo las opc posibles
+                Zend_Layout::getMvcInstance()->assign('btnNuevo','1');
+            else
+                Zend_Layout::getMvcInstance()->assign('btnNuevo','0');
+            */
             $model =  ucfirst($this->_model);
             Zend_Layout::getMvcInstance()->assign('link', $this->_model);
             Zend_Layout::getMvcInstance()->assign('active', $model);

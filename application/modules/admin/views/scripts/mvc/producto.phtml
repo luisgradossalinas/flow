@@ -1,3 +1,4 @@
+<script src="<?php echo SITE_URL?>/js/web/producto.js" ></script>
 <?=$this->partial('_partials/mensajes.phtml',array('messages' => $this->messages,'tipoMessages' => $this->tipoMessages));?>
 <div class="widget-box">
     <div class="widget-title">	
@@ -23,7 +24,9 @@
         <?php 
 	echo "<td>".$value['nom_prod']."</td>";
 	echo "<td>".$value['precio']."</td>";
-        echo "<td class=taskOptions><img src='".SITE_URL."/images/large/".$value['imagen']."' width=35></td>";
+        echo "<td class=taskOptions>
+            <a href='#' onclick=verFoto('".trim($value['imagen'])."')>
+            <img src='".SITE_URL."/images/large/".$value['imagen']."' width=35></a></td>";
 	if ($value['estado'] == 0)
             $estado = 'error.png';
 	echo "<td class=taskOptions><img src='".SITE_URL."/img/".$estado."' width=12></td>";

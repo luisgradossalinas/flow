@@ -19,14 +19,14 @@ class Application_Form_Producto extends Zend_Form
         $precio = new Zend_Form_Element_Text('precio');
         $precio->setLabel('Precio:');
         $precio->setRequired();
+        $precio->setAttrib('maxlength',7);
         $precio->setAttrib('class','v_numeric');
         $precio->addFilter('StripTags');
         $this->addElement($precio);
         
-        $imagen = new Zend_Form_Element_Text('imagen');
+        $imagen = new Zend_Form_Element_Hidden('imagen');
         $imagen->setLabel('Imagen:');
-        $imagen->setRequired();
-        $imagen->setAttrib('maxlength',50);
+        //$imagen->setRequired();
         $imagen->addFilter('StripTags');
         $this->addElement($imagen);
         

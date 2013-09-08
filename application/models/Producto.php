@@ -46,7 +46,10 @@ class Application_Model_Producto extends Zend_Db_Table
     public function searchByCategoria($cat) 
     {
         $sql = $this->getAdapter();
-        return $sql->select()->from($this->_name)->where('id_categoria = ?',$cat)->query()->fetchAll();
+        return $sql->select()->from($this->_name)
+                ->where('id_categoria = ?',$cat)
+                ->where('estado = ?', self::ESTADO_ACTIVO)
+                ->query()->fetchAll();
     }
 
 

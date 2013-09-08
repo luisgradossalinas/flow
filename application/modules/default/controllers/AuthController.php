@@ -29,7 +29,7 @@ class Default_AuthController extends Zend_Controller_Action
             $data = $this->_getAllParams();
             $f = new Zend_Filter_StripTags();
 
-                $username = $f->filter($data['usuario']);
+                $username = $f->filter($data['correo']);
                 $password = $f->filter($data['clave']);
 
                 Zend_Loader::loadClass('Zend_Auth_Adapter_DbTable');
@@ -51,7 +51,8 @@ class Default_AuthController extends Zend_Controller_Action
                     $auth->getStorage()->write($data);
 
                     $this->_guardarSesion($data);
-                    $this->_redirect('admin');
+                    $this->_redirect('/');
+                    echo Zend_Json::encode(array('success' => 1));
                 } else {
                     //$this->_redirect('login');
                     $this->view->messages = 'Usuario o clave incorrectos.';

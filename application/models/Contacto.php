@@ -26,13 +26,10 @@ class Application_Model_Contacto extends Zend_Db_Table
         $datos = array_intersect_key($datos, array_flip($this->_getCols()));
         
         if ($id > 0) {
-        	$datos['fecha_envio'] = new Zend_Date($datos['fecha_envio'],'yyyy-mm-dd');
-        	$datos['fecha_envio'] = $datos['fecha_envio']->get('yyyy-mm-dd');
         	$cantidad = $this->update($datos, 'id = ' . $id);
         	$id = ($cantidad < 1) ? 0 : $id;
         } else {
-        	$datos['fecha_envio'] = new Zend_Date($datos['fecha_envio'],'yyyy-mm-dd');
-        	$datos['fecha_envio'] = $datos['fecha_envio']->get('yyyy-mm-dd');
+        	$datos['fecha_envio'] = date('Y-m-d h:i:s');
         	$id = $this->insert($datos);
         }
         
