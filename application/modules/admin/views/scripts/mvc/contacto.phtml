@@ -26,7 +26,10 @@
 	echo "<td>".$value['correo']."</td>";
 	echo "<td>".$value['mensaje']."</td>";
 	echo "<td>".$this->FechaMostrar($value['fecha_envio'])."</td>";
-	echo "<td>".$value['respondido']."</td>";
+        $respondido = 'Sí';
+        if ($value['respondido'] == 0)
+            $respondido = 'No';
+	echo "<td class='taskOptions'>".$respondido."</td>";
 	echo "</tr>";
 	?>
         <?php

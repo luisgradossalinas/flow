@@ -76,15 +76,6 @@ class Application_Form_Pedido extends Zend_Form
         $this->addElement($usuario_atendio);
     }
 
-    public function populate($data)
-    {
-        $data['fecha_genera'] = new Zend_Date($data['fecha_genera'],'yyyy-mm-dd');
-        $data['fecha_genera'] = $data['fecha_genera']->get('dd/mm/yyyy');
-        $data['fecha_entrega'] = new Zend_Date($data['fecha_entrega'],'yyyy-mm-dd');
-        $data['fecha_entrega'] = $data['fecha_entrega']->get('dd/mm/yyyy');
-        return $this->setDefaults($data);
-    }
-
 
 }
 

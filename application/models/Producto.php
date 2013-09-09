@@ -51,6 +51,12 @@ class Application_Model_Producto extends Zend_Db_Table
                 ->where('estado = ?', self::ESTADO_ACTIVO)
                 ->query()->fetchAll();
     }
+    
+    public function searchByNombre($nom)
+    {
+        return $this->getAdapter()->select()->from($this->_name)
+                ->where("nom_prod like ?",'%'.$nom.'%')->query()->fetchAll();
+    }
 
 
 }

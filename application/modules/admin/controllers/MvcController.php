@@ -70,14 +70,14 @@ class Admin_MvcController extends App_Controller_Action_Admin
         else if ($estado == self::ELIMINADO) {
             $this->render('recurso-eliminado');
             
-        }else {
+        } else {
         
             //Cuando no debe aparecer el boton nuevo
-            /*if ($this->_model != 'contacto') //poner todo las opc posibles
+            if ($this->_model != 'contacto') //poner todo las opc posibles
                 Zend_Layout::getMvcInstance()->assign('btnNuevo','1');
             else
                 Zend_Layout::getMvcInstance()->assign('btnNuevo','0');
-            */
+            
             $model =  ucfirst($this->_model);
             Zend_Layout::getMvcInstance()->assign('link', $this->_model);
             Zend_Layout::getMvcInstance()->assign('active', $model);

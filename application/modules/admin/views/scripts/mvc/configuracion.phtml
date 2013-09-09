@@ -6,7 +6,7 @@
 <div class="widget-content nopadding">
     <table id='tabla' class="table table-condensed table-bordered" >
         <thead>
-            <tr><th></th><th>Nombre</th><th>Descripción</th><th>Valor</th><th>Estado</th></tr>
+        <tr><th></th><th>Nombre</th><th>Valor</th></tr>
         </thead>
         <?php
         echo '<tbody>';
@@ -19,17 +19,17 @@
             echo '<a data-original-title="Eliminar" class="tip-top" href="#myModal" data-toggle="modal" onclick="elimina('.$value['id'].')">';
             echo '<i class="icon-trash"></i></a>';
             echo '</td>';
-            echo '<td>'.$value['nombre'].'</td>';
-            echo '<td>'.$value['descripcion'].'</td>';
-            echo '<td>'.$value['valor'].'</td>';
-            if ($value['estado'] == Admin_MvcController::INACTIVO)
-                $estado = 'error.png';
-            echo '<td width=7%><center><span style=display:none>'.$value['estado'].'</span><img src='.SITE_URL.'/img/'.$estado.' width=15%><center></td>';
-            echo '</tr>';
+        ?>   
+        <?php 
+	echo "<td>".$value['nombre']."</td>";
+	echo "<td>".$value['valor']."</td>";
+	echo "</tr>";
+	?>
+        <?php
         }
         echo '</tbody>';
         ?>
     </table>
 </div>
-</div>
-<?=$this->partial('_partials/modal2.phtml',array('model' => $this->model));?>
+</div>    
+<?=$this->partial('_partials/modal.phtml',array('model' => $this->model));?>

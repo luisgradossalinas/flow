@@ -22,7 +22,7 @@ class Admin_GeneratorController extends App_Controller_Action_Admin
         $this->view->active = 'Generator de CRUD';
         Zend_Layout::getMvcInstance()->assign('link', 'generator');
         Zend_Layout::getMvcInstance()->assign('active', 'generator');
-        Zend_Layout::getMvcInstance()->assign('padre', '5');
+        Zend_Layout::getMvcInstance()->assign('padre', '4');
         
         $this->view->form = $this->_form;        
       

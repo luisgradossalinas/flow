@@ -16,12 +16,6 @@ class Application_Model_Rol extends Zend_Db_Table
     
     const TABLA = 'rol';
     
-    public function combo()
-    {
-        return $this->getAdapter()->select()->from($this->_name,array('key' => 'id', 'value' => 'nombre'))
-                ->where('estado = ?',self::ESTADO_ACTIVO)->query()->fetchAll();
-    }
-    
     public function guardar($datos)
     {         
         $id = 0;
@@ -39,6 +33,18 @@ class Application_Model_Rol extends Zend_Db_Table
             $id = $this->insert($datos);
         }
         return $id;
+    }
+    
+    public function lista()
+    {
+      return $this->select()->from($this->_name,array("key" => "id","value" => "nombre"))
+              ->where("estado = ?",self::ESTADO_ACTIVO)->query()->fetchAll();
+    }
+    
+    public function combo()
+    {
+        return $this->getAdapter()->select()->from($this->_name,array('key' => 'id', 'value' => 'nombre'))
+                ->where('estado = ?',self::ESTADO_ACTIVO)->query()->fetchAll();
     }
 
 
