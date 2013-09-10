@@ -1,0 +1,13 @@
+Desarrollo
+
+1) Terminar carrito de compras.
+2) Generar un correo con el pedido del usuario.
+3) Mejorar el login del usuario web.
+4) SEO - Categorías con nombres.
+5) Revisar plantilla que envía correos.
+
+Funcionales
+
+1) Subir más productos.
+2) Imprimir todas las imágenes con código respectivo(Precio).
+3) Poner número de cuenta BCP en un link adicional.
