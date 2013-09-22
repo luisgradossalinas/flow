@@ -94,8 +94,11 @@
 		<ul class="tree dynamized" style="display: block; " id="lstCategoria">
                     <?php
                     if ($this->layout()->categoria != null) {
-                        foreach ($this->layout()->categoria as $reg)
-                            echo "<li><a href=/categoria/".$reg['id'].">".$reg["nom_cat"]."</a></li>";
+                        foreach ($this->layout()->categoria as $reg) {
+                            $nomCat = str_replace(' ', '-', strtolower($reg["nom_cat"]));
+                            echo "<li><a href=/categoria/".$nomCat.'-'.$reg['id'].">".$reg["nom_cat"]."</a></li>";
+                        }
+                            
                     }
                     ?>
                 </ul>

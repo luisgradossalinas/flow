@@ -14,7 +14,7 @@ class Admin_RecursoController extends App_Controller_Action_Admin
     {
         parent::init();
         
-        $this->_rolrecurso = new Application_Model_RolRecurso;
+        //$this->_rolrecurso = new Application_Model_RolRecurso;
         $this->_recurso = new Application_Model_Recurso;
     }
     

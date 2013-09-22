@@ -41,5 +41,10 @@ class Application_Model_Usuario extends Zend_Db_Table
         
     }
     
+    public function validaLogin($user,$email) {
+        
+        
+    }
+    
 }
 

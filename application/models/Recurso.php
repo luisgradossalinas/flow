@@ -109,7 +109,7 @@ class Application_Model_Recurso extends Zend_Db_Table
     //Recursos dependiendo del ROL
     public function listadoPorRol($rol)
     {      
-        echo "hola";exit;
+        //echo "hola";exit;
         $sql = $this->getAdapter()->select()->from(array("a" => $this->_name),
                 array(
                     'a.id','a.nombre','a.access','a.estado','a.accion',
@@ -120,7 +120,8 @@ class Application_Model_Recurso extends Zend_Db_Table
                 ->where("a.estado = ?",self::ESTADO_ACTIVO)
                 ->where("a.orden  != ?",self::PADRE)
                 ->order(array('a.padre asc','a.orden asc'));
-               
+         
+        return $this->getAdapter()->fetchAll($sql);
         
                 //->query()->fetchAll();
     }

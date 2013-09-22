@@ -21,9 +21,18 @@ class Default_CategoriaController extends Zend_Controller_Action
     public function verAction()
     {
         $categoria = $this->_getParam("id");
+        $categoria = explode('-', $categoria);
+        $count = count($categoria);
+        $categoria = $categoria[$count-1];
+        
         $productoModelo = new Application_Model_Producto;
         
         $dataCategoria = $this->_categoriaModelo->find($categoria)->current();
+        
+        //Si ingresa un paràmetro y no tiene información
+        if ($dataCategoria == null) {
+            $this->_redirect(SITE_URL);
+        }
         
         $this->view->nombre_categoria = $dataCategoria->nom_cat;
         $listaProducto = $productoModelo->searchByCategoria($categoria);
