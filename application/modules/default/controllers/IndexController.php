@@ -19,7 +19,7 @@ class Default_IndexController extends Zend_Controller_Action {
 
     public function indexAction() {
         $productoModelo = new Application_Model_Producto;
-        $this->view->productos = $productoModelo->searchByCategoria(17);
+        $this->view->productos = $productoModelo->searchByCategoria(11);
     }
 
     public function contactoAction() {
