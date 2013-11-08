@@ -3,6 +3,7 @@
 class Application_Form_Rol extends Zend_Form
 {
 
+    
     public function init()
     {
         $this->setAttrib('id', 'form');

@@ -179,13 +179,7 @@ class Admin_MvcController extends App_Controller_Action_Admin
             $this->_clase->guardar($data);
         }
     }
-    
-    public function contactoCorreoAction()
-    {
-        echo "hola";
-        
-    }
-    
+
 
 }
 

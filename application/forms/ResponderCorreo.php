@@ -5,7 +5,7 @@ class Application_Form_ResponderCorreo extends Zend_Form
 
     public function init()
     {
-        $this->setAttrib('id', 'form-contacto');
+        $this->setAttrib('id', 'form');
         
         $nombres = new Zend_Form_Element_Text('nombres');
         $nombres->setLabel('Nombres:');
@@ -46,6 +46,9 @@ class Application_Form_ResponderCorreo extends Zend_Form
         $respuesta->setAttrib('maxlength',300);
         $respuesta->addFilter('StripTags');
         $this->addElement($respuesta);
+        
+        $id = new Zend_Form_Element_Hidden('id');
+        $this->addElement($id);
 
     }
 

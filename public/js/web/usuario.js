@@ -53,7 +53,7 @@ $(document).ready(function(){
                     dialog = $(this);
                     
                     $.ajax({
-                    url: urls.siteUrl + '/admin/usuario/operacion/ajax/validar',
+                    url: urls.siteUrl + '/admin/usuario/operacion/ajax/validar/ope/'+ope,
                     data: $('#form').serialize(),
                     type:'post',
                     success: function(result) {
