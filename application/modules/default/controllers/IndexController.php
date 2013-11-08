@@ -54,6 +54,8 @@ class Default_IndexController extends Zend_Controller_Action {
                 $this->view->mensaje = "Mensaje enviado correctamente.";
             }
         }
+        
+        //$form->removeElement('respuesta');
         $this->view->form = $form;
     }
 

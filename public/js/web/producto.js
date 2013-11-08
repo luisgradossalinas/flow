@@ -1,10 +1,6 @@
 var codigo = 0;
 var sentencia_crud = '';
 $(document).ready(function(){
-
-    $("#btnOpen").click(function() {
-        configModal(0, 'nuevo','Nuevo producto');
-    });
     
     verFoto = function(nombreFoto)
     {

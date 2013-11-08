@@ -13,8 +13,6 @@
                 <link rel="stylesheet" href="<?=SITE_URL?>/css/mensajes.css" />
                 <link rel="stylesheet" href="<?=SITE_URL?>/ui/css/smoothness/jquery-ui-1.8.19.custom.css" />
                 
-                <!--<link rel="stylesheet" href="<?=SITE_URL?>/ui/css/custom-theme/jquery-ui-1.8.16.custom.css" />--!>
-                
                 <link href=<?=SITE_URL."/kendo/content/shared/styles/examples-offline.css"?> rel="stylesheet">
                 <link href=<?=SITE_URL."/kendo/css/kendo.common.min.css"?> rel="stylesheet">
                 <link href=<?=SITE_URL."/kendo/css/kendo.default.min.css"?> rel="stylesheet">
@@ -50,12 +48,15 @@
                 
                 <script src=<?=SITE_URL."/js/web/validate.js"?> ></script>
                 <script src="<?=SITE_URL?>/js/web/main.js"></script>
-                <script src=<?=SITE_URL."/js/web/mvc.js"?> ></script>
                 
                 <?=$this->headScript() ?>
 	</head>
 	<body>
-		
+                <!--Puede ir el logo o el nombre del Sistema-->
+                <div>
+                <img src="<?=SITE_URL?>/img/logo_login.png" width="20%" height="10%" />
+                </div>
+            
 		<div id="header">
 			<h1><a href="./dashboard.html">Admin Test</a></h1>		
 		</div>

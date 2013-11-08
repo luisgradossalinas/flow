@@ -16,14 +16,11 @@ class Application_Form_Categoria extends Zend_Form
         
         $estado = new Zend_Form_Element_Select('estado');
         $estado->setLabel('Estado:');
-        
-        $dataFN = array();
-        
-        array_unshift($dataFN,array('key'=> '0', 'value' => 'Inactivo'));
-        array_unshift($dataFN,array('key'=> '1', 'value' => 'Activo'));
-        array_unshift($dataFN,array('key'=> '', 'value' => 'Seleccione'));
-        
-        $estado->setMultiOptions($dataFN);
+        $dataEstado = array();
+        array_unshift($dataEstado,array('key'=> '0', 'value' => 'Inactivo'));
+        array_unshift($dataEstado,array('key'=> '1', 'value' => 'Activo'));
+        array_unshift($dataEstado,array('key'=> '', 'value' => 'Seleccione'));
+        $estado->setMultiOptions($dataEstado);
         
     
         $estado->setRequired();

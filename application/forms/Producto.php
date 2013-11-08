@@ -45,15 +45,13 @@ class Application_Form_Producto extends Zend_Form
         $estado->addFilter('StripTags');
         $this->addElement($estado);
         
-        $id_categoria = new Zend_Form_Element_Select('id_categoria');
-        $id_categoria->setLabel('Categoría:');
-        $id_categoria->setRequired();
-        
         $arrayCategoria = $this->_categoria->listadoCombo();
         array_unshift($arrayCategoria,array('key'=> '', 'value' => 'Seleccione'));
         
+        $id_categoria = new Zend_Form_Element_Select('id_categoria');
+        $id_categoria->setLabel('Categoría:');
+        $id_categoria->setRequired();
         $id_categoria->addMultiOptions($arrayCategoria);
-        
         $id_categoria->addFilter('StripTags');
         $this->addElement($id_categoria);
         

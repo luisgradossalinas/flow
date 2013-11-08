@@ -2,10 +2,6 @@ var codigo = 0;
 var sentencia_crud = '';
 $(document).ready(function(){
 
-     $("#btnOpen").click(function() {
-         configModal(0, 'nuevo','Nuevo registro');
-    });
-        
     configModal = function(id, ope, titulo){
         codigo = id;
         sentencia_crud = ope;
@@ -34,8 +30,6 @@ $(document).ready(function(){
                         success: function(result) {
                             $('#orden').val(result);
                         }
-                        
-                        
                     })
                     
                })
@@ -264,7 +258,52 @@ $(document).ready(function(){
         
     }
     
-    
- 
-  
+    //Envia correo a contacto
+    enviarCorreo = function(id) {
+        
+        titulo = 'Responder correo';
+        codigo = id;
+        sentencia_crud = 'edit';
+        $.ajax({
+            url: urls.siteUrl + '/admin/logica/contacto-correo',
+            data:{id:id},
+            type:'post',
+            success: function(result) {
+                
+                $('#ventana-modal').empty().html(result);
+
+                $('#ventana-modal').dialog({
+                height:500,
+                width: 620, 
+                modal: true,
+                resizable: false,
+                title:titulo,
+                buttons: {
+                    "Enviar correo": function() {
+                    dialog = $(this);
+                    
+                    $.ajax({
+                    url: urls.siteUrl + '/admin/logica/enviar-correo-contacto',
+                    data: $('#form').serialize(),
+                    type:'post',
+                    success: function(result) {
+                       //Enviar notifacion por correo al contacto
+                       alert(result);
+                    }
+                    })
+
+                    },
+                     "Cancelar": function() {
+                       $(this).dialog("close");
+                        
+                    }
+                },
+                close: function() {//$("#ventana-modal").remove();
+                }
+                });
+            }
+        })
+        
+    }
+
 })

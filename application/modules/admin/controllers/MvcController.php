@@ -16,6 +16,7 @@ class Admin_MvcController extends App_Controller_Action_Admin
     {
         parent::init();
         
+        $this->view->headScript()->appendFile(SITE_URL.'/js/web/mvc.js');
         Zend_Layout::getMvcInstance()->assign('btnNuevo','1');
         
         $sesionMvc  = new Zend_Session_Namespace('sesion_mvc');
@@ -132,6 +133,8 @@ class Admin_MvcController extends App_Controller_Action_Admin
                     $this->_form->populate($data->toArray());
                 }
             }
+            $sessionFoto = new Zend_Session_Namespace("foto");
+            unset($sessionFoto->nombre);
             echo $this->_form;         
         }
         
@@ -152,9 +155,14 @@ class Admin_MvcController extends App_Controller_Action_Admin
         if ($this->_getParam('ajax') == 'save') {
             
             $sessionFoto = new Zend_Session_Namespace("foto");
-            $utilfile =   $this->_helper->getHelper('UtilFiles');
-            $utilfile->_generarImagenes($sessionFoto->nombre);
-            $data['imagen'] = $sessionFoto->nombre;
+            if (isset($sessionFoto->nombre)) {
+                $utilfile =   $this->_helper->getHelper('UtilFiles');
+                $utilfile->_generarImagenes($sessionFoto->nombre);
+                $data['imagen'] = $sessionFoto->nombre;
+                unset($sessionFoto->nombre);
+            }
+                    
+            
       
             if ($this->_getParam('scrud') == 'nuevo') {
                 $data['fecha_crea'] = date("Y-m-d H:i:s");
@@ -170,6 +178,12 @@ class Admin_MvcController extends App_Controller_Action_Admin
             
             $this->_clase->guardar($data);
         }
+    }
+    
+    public function contactoCorreoAction()
+    {
+        echo "hola";
+        
     }
     
 

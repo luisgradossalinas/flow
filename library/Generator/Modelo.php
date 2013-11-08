@@ -17,10 +17,13 @@ class Generator_Modelo extends Zend_Db_Table
         $cuerpo .= 'unset($datos["id"]);'. "\n";
         
         $cuerpo .= '$datos = array_intersect_key($datos, array_flip($this->_getCols()));'. "\n\n";
-        $cuerpo .= 'if ($id > 0) {'."\n";
+        
         if ($this->haveFieldDate($tabla)) {
             $cuerpo .= $this->setFieldFecha($tabla);
         }
+        
+        $cuerpo .= 'if ($id > 0) {'."\n";
+        
         $cuerpo .= "\t".'$cantidad = $this->update($datos, \''.$primaryKey.' = \' . $id);'."\n";
         $cuerpo .= "\t".'$id = ($cantidad < 1) ? 0 : $id;'."\n";
         $cuerpo .= '} else {'."\n";
@@ -28,10 +31,6 @@ class Generator_Modelo extends Zend_Db_Table
         if (!$this->esIdentity($tabla)) {
             $cuerpo .= "\t".'$GM = new Generator_Modelo();'."\n";
             $cuerpo .= "\t".'$datos[\''.$primaryKey.'\'] = $GM->maxCodigo($this->_name);'."\n";
-        }
-        
-        if ($this->haveFieldDate($tabla)) {
-            $cuerpo .= $this->setFieldFecha($tabla);
         }
         
         $cuerpo .= "\t".'$id = $this->insert($datos);'."\n";
@@ -119,13 +118,17 @@ class Generator_Modelo extends Zend_Db_Table
         $db = $this->getAdapter();
         $dataTabla = $db->describeTable($tabla);
         
-        $cuerpo = '';
+        $cuerpo = '$fechaBD = new App_Db_Table_FechaBD;'. "\n";  
+        
         foreach ($dataTabla as $key => $value) {
             $campo = $key;
             $tipo = $value['DATA_TYPE'];
                 if ($tipo == 'date' or $tipo == 'datetime' ){
-                    $cuerpo .=  "\t".'$datos[\''.$campo.'\'] = new Zend_Date($datos[\''.$campo.'\'],\'yyyy-mm-dd\');'. "\n";
-                    $cuerpo .=  "\t".'$datos[\''.$campo.'\'] = $datos[\''.$campo.'\']->get(\'yyyy-mm-dd\');'. "\n";                 
+                    //if ($datos['fecha_nac'] != '')
+                    //$datos['fecha_nac'] = $fechaBD->FechaBD($datos['fecha_nac']);
+                    
+                    $cuerpo .=  'if ($datos[\''.$campo.'\'] != \'\')'. "\n";
+                    $cuerpo .=  "\t".'$datos[\''.$campo.'\'] = $fechaBD->FechaBD($datos[\''.$campo.'\']);'. "\n\n";                 
                 } 
                 
         }         

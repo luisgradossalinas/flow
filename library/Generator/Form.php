@@ -92,6 +92,7 @@ class Generator_Form extends Zend_Db_Table
         $dataTabla = $db->describeTable($tabla);
         
         $populate = '';
+        $contador = 0;
         
         foreach ($dataTabla as $key => $value) {
             $campo = $key;
@@ -99,8 +100,11 @@ class Generator_Form extends Zend_Db_Table
             $tipo = $value['DATA_TYPE'];
    
                 if ($tipo == 'date' or $tipo == 'datetime' ){
-                    $populate .=  '$data[\''.$campo.'\'] = new Zend_Date($data[\''.$campo.'\'],\'yyyy-mm-dd\');'. "\n";
-                    $populate .=  '$data[\''.$campo.'\'] = $data[\''.$campo.'\']->get(\'dd/mm/yyyy\');'. "\n";
+                    $contador++;
+                    if ($contador == 1)
+                    $populate .=  '$claseFechaMostrar = new App_View_Helper_FechaMostrar;'."\n";
+                    
+                    $populate .=  '$data[\''.$campo.'\'] = $claseFechaMostrar->FechaMostrar($data[\''.$campo.'\']);'. "\n";
                 }             
             
         }

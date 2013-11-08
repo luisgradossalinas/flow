@@ -41,11 +41,13 @@ class Application_Model_Rol extends Zend_Db_Table
               ->where("estado = ?",self::ESTADO_ACTIVO)->query()->fetchAll();
     }
     
-    public function combo()
+    public function listadocombo()
     {
         return $this->getAdapter()->select()->from($this->_name,array('key' => 'id', 'value' => 'nombre'))
                 ->where('estado = ?',self::ESTADO_ACTIVO)->query()->fetchAll();
     }
+    
+    
 
 
 }

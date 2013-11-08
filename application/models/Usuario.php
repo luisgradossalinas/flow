@@ -11,6 +11,9 @@ class Application_Model_Usuario extends Zend_Db_Table {
     const TABLA = 'usuario';
 
     public function guardar($datos) {
+        
+        $fechaBD = new App_Db_Table_FechaBD;
+        
         $id = 0;
         if (!empty($datos['id'])) {
             $id = (int) $datos['id'];
@@ -19,6 +22,9 @@ class Application_Model_Usuario extends Zend_Db_Table {
 
         $datos = array_intersect_key($datos, array_flip($this->_getCols()));
 
+        if ($datos['fecha_nac'] != '')
+        $datos['fecha_nac'] = $fechaBD->FechaBD($datos['fecha_nac']);
+        
         if ($id > 0) {
             $cantidad = $this->update($datos, 'id = ' . $id);
             $id = ($cantidad < 1) ? 0 : $id;
