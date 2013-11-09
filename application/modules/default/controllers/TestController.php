@@ -23,6 +23,7 @@ class Default_TestController extends Zend_Controller_Action {
                   'nombres' => 'Luis Martin Grados Salinas',
                   'celular' => '987603599',
                   'mensaje' => 'holaaa',
+                  'respuesta' => 'Mi respuesta',
                 'usuario' => 'Paul',
                 'nombre' => 'Carlos Carlos',
                 'anuncioPuesto' => 'Nuevo Puesto',
@@ -42,7 +43,7 @@ class Default_TestController extends Zend_Controller_Action {
             );
             //$mailer->confirmarCompra($dataMail);
             
-            $mailer->contactoWeb($dataMail);
+            $mailer->responderCorreo($dataMail);
 
         
         

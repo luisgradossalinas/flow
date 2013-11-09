@@ -21,13 +21,15 @@ class Application_Form_Recurso extends Zend_Form
         $access->addFilter('StripTags');
         $this->addElement($access);
         
-        $estado = new Zend_Form_Element_Text('estado');
+        $dataEstado = array();
+        array_unshift($dataEstado,array('key'=> '0', 'value' => 'Inactivo'));
+        array_unshift($dataEstado,array('key'=> '1', 'value' => 'Activo'));
+        array_unshift($dataEstado,array('key'=> '', 'value' => 'Seleccione'));
+        
+        $estado = new Zend_Form_Element_Select('estado');
         $estado->setLabel('Estado:');
         $estado->setRequired();
-        $estado->addValidator(new Zend_Validate_Int());
-        $estado->setAttrib('maxlength',3);
-        $estado->setAttrib('size',5);
-        $estado->setAttrib('class','v_numeric');
+        $estado->setMultiOptions($dataEstado);
         $estado->addFilter('StripTags');
         $this->addElement($estado);
         
@@ -83,37 +85,6 @@ class Application_Form_Recurso extends Zend_Form
         $tab->addFilter('StripTags');
         $this->addElement($tab);
         
-        $usuario_crea = new Zend_Form_Element_Text('usuario_crea');
-        $usuario_crea->setLabel('Usuario_crea:');
-        $usuario_crea->addValidator(new Zend_Validate_Int());
-        $usuario_crea->setAttrib('maxlength',9);
-        $usuario_crea->setAttrib('class','v_numeric');
-        $usuario_crea->addFilter('StripTags');
-        $this->addElement($usuario_crea);
-        
-        $fecha_crea = new Zend_Form_Element_Text('fecha_crea');
-        $fecha_crea->setLabel('Fecha_crea:');
-        $fecha_crea->addValidator(new Zend_Validate_Date('DD-MM-YYYY'));
-        $fecha_crea->setAttrib('maxlength',10);
-        $fecha_crea->setAttrib('class','v_datepicker');
-        $fecha_crea->addFilter('StripTags');
-        $this->addElement($fecha_crea);
-        
-        $usuario_actu = new Zend_Form_Element_Text('usuario_actu');
-        $usuario_actu->setLabel('Usuario_actu:');
-        $usuario_actu->addValidator(new Zend_Validate_Int());
-        $usuario_actu->setAttrib('maxlength',9);
-        $usuario_actu->setAttrib('class','v_numeric');
-        $usuario_actu->addFilter('StripTags');
-        $this->addElement($usuario_actu);
-        
-        $fecha_actu = new Zend_Form_Element_Text('fecha_actu');
-        $fecha_actu->setLabel('Fecha_actu:');
-        $fecha_actu->addValidator(new Zend_Validate_Date('DD-MM-YYYY'));
-        $fecha_actu->setAttrib('maxlength',10);
-        $fecha_actu->setAttrib('class','v_datepicker');
-        $fecha_actu->addFilter('StripTags');
-        $this->addElement($fecha_actu);
     }
 
 }
